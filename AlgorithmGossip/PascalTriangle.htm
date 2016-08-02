@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="css/stdlayout.css" type="text/css">
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="css/print.css" type="text/css">
+
+
+
+
+
+  
+  
+  
+  
+  
+  <meta content="text/html; charset=Big5" http-equiv="content-type">
+
+
+
+
+
+  
+  
+  
+  
+  
+  <title>巴斯卡三角形</title>
+</head>
+
+
+<body>
+
+
+
+
+
+<h3><a href="http://caterpillar.onlyfun.net/Gossip/index.html">From
+Gossip@caterpillar</a></h3>
+
+
+
+
+
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip:&nbsp;巴斯卡三角形</a></h1>
+
+
+
+
+
+巴斯卡（Pascal）三角形基本上就是在解 nCr ，因為三角形上的每一個數字各對應一個n<big>C</big>r，其中 n 為 row，而 r 為 column，如下：<br>
+
+
+
+　　　　0<big>C</big>0<br>
+
+
+
+　　　1<big>C</big>0 1<big>C</big>1<br>
+
+
+
+　　2<big>C</big>0 2<big>C</big>1 2<big>C</big>2<br>
+
+
+
+　3<big>C</big>0 3<big>C</big>1 3<big>C</big>2 3<big>C</big>3<br>
+
+
+
+4<big>C</big>0 4<big>C</big>1 4<big>C</big>2 4<big>C</big>3 4<big>C</big>4<br>
+
+
+
+<br>
+
+
+
+對應的數據如下圖所示： <br>
+
+
+
+
+
+<div style="text-align: center;"><img style="width: 500px; height: 307px;" alt="巴斯卡三角" title="巴斯卡三角" src="images/pascal.jpg"><br>
+
+
+
+<br>
+
+
+
+<div style="text-align: left;">
+<h2>&nbsp;解法</h2>
+
+
+
+</div>
+
+
+
+<br>
+
+
+
+<div style="text-align: left;">巴斯卡三角形中的 nCr 可以使用以下這個公式來計算，以避免階乘運算時的數值溢位：<br>
+
+
+
+<div style="margin-left: 40px; font-weight: bold; font-family: Courier New,Courier,monospace;">n<big><big>C</big></big>r = [(n-r+1)/r] * n<big><big>C</big></big>r-1 <br>
+
+
+
+n<big><big>C</big></big>0 = 1&nbsp;</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<br>
+
+
+
+<h2> 演算法</h2>
+
+
+
+
+<br>
+
+
+
+
+<pre>/* 計算nCr，但是並不快，只是方便 */<br>Procedure COMBI(n, r) [<br>    FOR(i = 1; i &lt;= r; i = i + 1)<br>        p = p * (n-i+1) / i;<br><br>    RETURN p;<br>] <br></pre>
+
+
+
+<br>
+
+
+
+解決 n<big>C</big>r 的算法之後，剩下的就是如何將這些數字排版成三角形的問題了，這就要看您是如何顯示成果的了，下面的程式將分別示範文字模式（C實作）與視窗模式（Java實作）的解法。
+
+<h2> 實作</h2>
+
+
+
+
+
+<ul>
+
+
+
+  <li> C
+  </li>
+
+
+
+</ul>
+
+
+
+
+<pre>#include &lt;stdio.h&gt;<br>#define N 12<br><br>long combi(int n, int r){<br>    int i;<br>    long p = 1;<br><br>    for(i = 1; i &lt;= r; i++)<br>        p = p * (n-i+1) / i;<br><br>    return p;<br>}<br><br>void paint() {<br>    int n, r, t;<br><br>    for(n = 0; n &lt;= N; n++) {<br>        for(r = 0; r &lt;= n; r++) {<br>            int i;<br>            /* 排版設定開始 */<br>            if(r == 0) {  <br>                for(i = 0; i &lt;= (N-n); i++) {<br>                    printf("   ");<br>                }<br>            }<br>            else {<br>                printf("   ");<br>            } /* 排版設定結束 */<br><br>            printf("%3d", combi(n, r));<br>        }<br>        printf("\n");<br>    }<br>}<br><br>int main() {<br>    paint();<br>    return 0;<br>} <br></pre>
+
+
+
+
+<br>
+
+
+
+
+<ul>
+
+
+
+  <li> Java
+  </li>
+
+
+
+</ul>
+
+
+
+
+<pre>import java.awt.*; <br>import javax.swing.*; <br><br>public class Pascal extends JFrame { <br>    public Pascal() { <br>        setBackground(Color.white); <br>        setTitle("巴斯卡三角形"); <br>        setSize(520, 350); <br>        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); <br>        show(); <br>    } <br><br>    private long combi(int n, int r){ <br>        int i; <br>        long p = 1; <br><br>        for(i = 1; i &lt;= r; i++) <br>            p = p * (n-i+1) / i; <br>  <br>        return p; <br>    } <br><br>    public void paint(Graphics g) { <br>        final int N = 12; <br>        int n, r, t; <br><br>        for(n = 0; n &lt;= N; n++) { <br>            for(r = 0; r &lt;= n; r++) <br>                g.drawString(" " + combi(n, r), <br>                    (N-n)*20 + r * 40, n * 20 + 50); <br>        } <br>    } <br><br>    public static void main(String args[]) { <br>        Pascal frm = new Pascal(); <br>    } <br>}</pre>
+
+
+
+<br>
+
+
+
+<br>
+
+
+
+
+
+</body>
+</html>

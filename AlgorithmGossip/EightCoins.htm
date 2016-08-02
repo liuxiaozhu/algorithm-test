@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="css/stdlayout.css" type="text/css">
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="css/print.css" type="text/css">
+
+
+
+  
+  
+  
+  <meta content="text/html; charset=Big5" http-equiv="content-type">
+
+
+
+  
+  
+  
+  <title>八枚銀幣</title>
+</head>
+
+
+<body>
+
+
+
+<h3><a href="http://caterpillar.onlyfun.net/Gossip/index.html">From
+Gossip@caterpillar</a></h3>
+
+
+
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip:&nbsp;八枚銀幣</a></h1>
+
+
+
+<h2>&nbsp;說明</h2>
+現有八枚銀幣a b c d e f g h，已知其中一枚是假幣，其重量不同於真幣，但不知是較輕或較重，如何使用天平以最少的比較次數，決定出哪枚是假幣，並得知假幣比真幣較輕或較重。<br>
+<h2>解法</h2>
+單就求假幣的問題是不難，但問題限制使用最少的比較次數，所以我們不能以單純的迴圈比較來求解，我們可以使用決策樹（decision tree），使用分析與樹狀圖來協助求解。<br>
+<br>
+一個簡單的狀況是這樣的，我們比較a+b+c與d+e+f ，如果相等，則假幣必是g或h，我們先比較g或h哪個較重，如果g較重，再與a比較（a是真幣），如果g等於a，則g為真幣，則h為假幣，由於h比g輕而 g是真幣，則h假幣的重量比真幣輕。<br>
+<br>
+完整的比較決策樹如下圖所示： <br>
+
+
+
+<div style="text-align: center;"><img style="width: 634px; height: 171px;" alt="八枚銀幣" title="八枚銀幣" src="images/eightCoins-1.jpg"><br>
+<br>
+</div>
+為了方便使用迴圈，使用號碼0至7表示銀幣，範例程式可以讓您輸入假幣重量，但您無法事先得知假幣是哪一枚，程式可得知假幣是哪一枚，且它比真幣輕或重。 <br>
+<h2> 實作</h2>
+
+<ul>
+  <li> C
+  </li>
+</ul>
+
+<pre>#include &lt;stdio.h&gt; <br>#include &lt;stdlib.h&gt; <br>#include &lt;time.h&gt; <br> <br>void compare(int[], int, int, int); <br>void eightcoins(int[]); <br> <br>int main(void) { <br>    int coins[8] = {0}; <br>    int i; <br><br>    srand(time(NULL)); <br><br>    for(i = 0; i &lt; 8; i++) <br>        coins[i] = 10; <br><br>    printf("\n輸入假幣重量(比10大或小)："); <br>    scanf("%d", &amp;i); <br>    coins[rand() % 8] = i; <br><br>    eightcoins(coins); <br><br>    printf("\n\n列出所有錢幣重量："); <br>    for(i = 0; i &lt; 8; i++) <br>        printf("%d ", coins[i]); <br><br>    printf("\n"); <br><br>    return 0; <br>} <br><br>void compare(int coins[], int i, int j, int k) { <br>    if(coins[i] &gt; coins[k]) <br>        printf("\n假幣 %d 較重", i+1); <br>    else <br>        printf("\n假幣 %d 較輕", j+1); <br>} <br><br>void eightcoins(int coins[]) { <br>    if(coins[0]+coins[1]+coins[2] == <br>       coins[3]+coins[4]+coins[5]) { <br>        if(coins[6] &gt; coins[7]) <br>            compare(coins, 6, 7, 0); <br>        else <br>            compare(coins, 7, 6, 0); <br>    } <br>    else if(coins[0]+coins[1]+coins[2] &gt; <br>            coins[3]+coins[4]+coins[5]) { <br>        if(coins[0]+coins[3] == coins[1]+coins[4]) <br>            compare(coins, 2, 5, 0); <br>        else if(coins[0]+coins[3] &gt; coins[1]+coins[4]) <br>            compare(coins, 0, 4, 1); <br>        if(coins[0]+coins[3] &lt; coins[1]+coins[4]) <br>            compare(coins, 1, 3, 0); <br>    } <br>    else if(coins[0]+coins[1]+coins[2] &lt;<br>            coins[3]+coins[4]+coins[5]) { <br>        if(coins[0]+coins[3] == coins[1]+coins[4]) <br>            compare(coins, 5, 2, 0); <br>        else if(coins[0]+coins[3] &gt; coins[1]+coins[4]) <br>            compare(coins, 3, 1, 0); <br>        if(coins[0]+coins[3] &lt; coins[1]+coins[4]) <br>            compare(coins, 4, 0, 1); <br>    } <br>} <br></pre>
+
+<br>
+
+<ul>
+  <li> Java
+  </li>
+</ul>
+
+<pre>public class Coins {<br>    private int[] coins;<br>    <br>    public Coins() {<br>        coins = new int[8];<br>        for(int i = 0; i &lt; 8; i++) <br>            coins[i] = 10; <br>    }<br>    <br>    public void setFake(int weight) {<br>        coins[(int) (Math.random() * 7)] = weight;<br>    }<br>    <br>    public void fake() {<br>        if(coins[0]+coins[1]+coins[2] == <br>           coins[3]+coins[4]+coins[5]) { <br>            if(coins[6] &gt; coins[7]) <br>                compare(6, 7, 0); <br>            else <br>                compare(7, 6, 0); <br>        } <br>        else if(coins[0]+coins[1]+coins[2] &gt; <br>                coins[3]+coins[4]+coins[5]) { <br>            if(coins[0]+coins[3] == coins[1]+coins[4]) <br>                compare(2, 5, 0); <br>            else if(coins[0]+coins[3] &gt; coins[1]+coins[4]) <br>                compare(0, 4, 1); <br>            if(coins[0]+coins[3] &lt; coins[1]+coins[4]) <br>                compare(1, 3, 0); <br>        } <br>        else if(coins[0]+coins[1]+coins[2] &lt; <br>                coins[3]+coins[4]+coins[5]) { <br>            if(coins[0]+coins[3] == coins[1]+coins[4]) <br>                compare(5, 2, 0); <br>            else if(coins[0]+coins[3] &gt; coins[1]+coins[4]) <br>                compare(3, 1, 0); <br>            if(coins[0]+coins[3] &lt; coins[1]+coins[4]) <br>                compare(4, 0, 1); <br>        } <br>    }<br>    <br>    protected void compare(int i, int j, int k) {<br>        if(coins[i] &gt; coins[k]) <br>            System.out.print("\n假幣 " + (i+1) + " 較重"); <br>        else <br>            System.out.print("\n假幣 " + (j+1) + " 較輕"); <br>    }<br>    <br>    public static void main(String[] args) {<br>        if(args.length == 0) {<br>            System.out.println("輸入假幣重量（比10大或小）");<br>            System.out.println("ex. java Coins 5");<br>            return;<br>        }<br>        <br>        Coins eightCoins = new Coins();<br>        eightCoins.setFake(Integer.parseInt(args[0]));<br>        eightCoins.fake();<br>    }<br>}</pre>
+<br>
+
+
+
+</body>
+</html>

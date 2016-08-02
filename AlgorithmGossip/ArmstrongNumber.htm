@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="css/stdlayout.css" type="text/css">
+
+
+
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="css/print.css" type="text/css">
+
+
+
+
+  
+  
+  
+  
+  <meta content="text/html; charset=Big5" http-equiv="content-type">
+
+
+
+
+  
+  
+  
+  
+  <title>阿姆斯壯數</title>
+</head>
+
+
+<body>
+
+
+
+
+<h3><a href="http://caterpillar.onlyfun.net/Gossip/index.html">From
+Gossip@caterpillar</a></h3>
+
+
+
+
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: 阿姆斯壯數</a></h1>
+
+
+
+
+<h2>說明</h2>
+
+在三位的整數中，例如153可以滿足1<sup>3</sup> + 5<sup>3</sup> + 3<sup>3</sup> = 153，這樣的數稱之為Armstrong數，試寫出一程式找出所有的三位數Armstrong數。<br>
+
+<h2>解法</h2>
+
+Armstrong數的尋找，其實就是在問如何將一個數字分解為個位數、十位數、百位數......，這只要使用除法與餘數運算就可以了，例如輸入 input為abc，則：<br>
+
+<div style="margin-left: 40px;"><span style="font-weight: bold; font-family: Courier New,Courier,monospace;">a = input / 100 </span><br style="font-weight: bold; font-family: Courier New,Courier,monospace;">
+
+<span style="font-weight: bold; font-family: Courier New,Courier,monospace;">b = (input%100) / 10 </span><br style="font-weight: bold; font-family: Courier New,Courier,monospace;">
+
+<span style="font-weight: bold; font-family: Courier New,Courier,monospace;">c = input % 10 </span><br>
+
+</div>
+
+
+
+
+
+
+
+<h2> 實作</h2>
+
+
+<ul>
+
+  <li> C
+  </li>
+
+</ul>
+
+
+<pre>#include &lt;stdio.h&gt; <br>#include &lt;time.h&gt; <br>#include &lt;math.h&gt; <br><br>int main(void) { <br>    int a, b, c; <br>    int input; <br><br>    printf("尋找Armstrong數：\n"); <br><br>    for(input = 100; input &lt;= 999; input++) { <br>        a = input / 100; <br>        b = (input % 100) / 10; <br>        c = input % 10; <br>        if(a*a*a + b*b*b + c*c*c == input) <br>            printf("%d ", input); <br>    } <br><br>    printf("\n"); <br><br>    return 0; <br>} <br></pre>
+
+
+<br>
+
+
+<ul>
+
+  <li> Java
+  </li>
+
+</ul>
+
+
+<pre>public class Armstrong {<br>    public static void main(String[] args) {<br>        System.out.println("尋找Armstrong數："); <br><br>        for(int i = 100; i &lt;= 999; i++) { <br>                int a = i / 100; <br>                int b   = (i % 100) / 10; <br>                int c = i % 10; <br>                if(a*a*a + b*b*b + c*c*c == i) <br>                        System.out.print(i + " "); <br>        } <br><br>        System.out.println();<br>    }<br>}</pre>
+
+<br>
+
+<br>
+
+
+
+
+</body>
+</html>
