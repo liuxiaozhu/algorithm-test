@@ -27,7 +27,7 @@
   
   
   
-  <meta content="text/html; charset=Big5" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 
 
 
@@ -36,7 +36,7 @@
   
   
   
-  <title>Shell �ƧǪk - ��}�����J�Ƨ�</title>
+  <title>Shell 排序法 - 改良的插入排序</title>
 </head>
 
 
@@ -51,56 +51,56 @@ Gossip@caterpillar</a></h3>
 
 
 
-<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: Shell �ƧǪk - ��}�����J�Ƨ�</a></h1>
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: Shell 排序法 - 改良的插入排序</a></h1>
 
 
 
 
-<h2>����</h2>
-���J�ƧǪk�ѥ��ƧǪ���b���e�ݨ��X�@�ӭȡA���J�w�Ƨǫe�b�����A����m�A����²����t�פ��֡C<br>
+<h2>說明</h2>
+插入排序法由未排序的後半部前端取出一個值，插入已排序前半部的適當位置，概念簡單但速度不快。<br>
 <br>
-�Ƨǭn�[�֪��򥻭�h���@�A�O����@�����ƧǶi��ɡA���q�Q�Ϋe�@���Ƨǫ᪺���G�A�H�[�ֱƧǪ��t�סAShell�ƧǪk�Y�O��󦹤@�����ӧ�}���J�ƧǪk�C<br>
-<h2>�Ѫk</h2>
-Shell�ƧǪk�̪�OD.L Shell��1959�Ҵ��X�A���]�n�ƧǪ�������n�ӡA�h�C���i�洡�J�ƧǮɨä��O�Ҧ��������P�ɶi��ɡA�ӬO���@�q���j�C<br>
+排序要加快的基本原則之一，是讓後一次的排序進行時，儘量利用前一次排序後的結果，以加快排序的速度，Shell排序法即是基於此一概念來改良插入排序法。<br>
+<h2>解法</h2>
+Shell排序法最初是D.L Shell於1959所提出，假設要排序的元素有n個，則每次進行插入排序時並不是所有的元素同時進行時，而是取一段間隔。<br>
 <br>
-Shell�����N���j�]�w��n/2�A�M����D�i�洡�J�ƧǡA�A�ӱN���jn/4�A���D�i��Ƨǰʧ@�A�A�Ӷ��j�]�w��n/8�Bn/16�A���춡�j��1���᪺��
-��@���Ƨǲפ�A�ѩ�W�@�����Ƨǰʧ@���|�N�T�w���j���������ƧǦn�A�ҥH�����j�V�ӶV�p�ɡA�Y�Ǥ�����󥿽T��m�����v�V���A�]���̫�X�����Ƨǰʧ@�N
-�i�H�j�T��C�C<br>
+Shell首先將間隔設定為n/2，然後跳躍進行插入排序，再來將間隔n/4，跳躍進行排序動作，再來間隔設定為n/8、n/16，直到間隔為1之後的最
+後一次排序終止，由於上一次的排序動作都會將固定間隔內的元素排序好，所以當間隔越來越小時，某些元素位於正確位置的機率越高，因此最後幾次的排序動作將
+可以大幅減低。<br>
 <br>
-�|�ӨҤl�ӻ��A���]���@���ƧǪ��Ʀr�p�k�G89 12 65 97 61 81 27 2 61 98<br>
+舉個例子來說，假設有一未排序的數字如右：89 12 65 97 61 81 27 2 61 98<br>
 <br>
-�Ʀr���`�Ʀ@��10�ӡA�ҥH�Ĥ@���ڭ̱N���j�]�w��10 / 2 = 5�A���ɧڭ̹ﶡ�j��5���Ʀr�i��ƧǡA�p�U�ҥܡG<br>
+數字的總數共有10個，所以第一次我們將間隔設定為10 / 2 = 5，此時我們對間隔為5的數字進行排序，如下所示：<br>
 
-<div style="text-align: center;"><img style="width: 225px; height: 95px;" alt="Shell �Ƨ�" title="Shell �Ƨ�" src="images/shellSort-1.jpg"><br>
+<div style="text-align: center;"><img style="width: 225px; height: 95px;" alt="Shell 排序" title="Shell 排序" src="images/shellSort-1.jpg"><br>
 <div style="text-align: left;"></div>
-<div style="text-align: left;">�e�u�s������������ �n�@�_�i��ƧǪ������A�A�ӱN���j�]�w��5 / 2���ӡA�]�N�O2�A�h�ĤG�������J�Ƨǹ�H�p�U�ҥܡG<br>
-<div style="text-align: center;"><img style="width: 229px; height: 74px;" alt="Shell �Ƨ�" title="Shell �Ƨ�" src="images/shellSort-2.jpg"><br>
+<div style="text-align: left;">畫線連結的部份表示 要一起進行排序的部份，再來將間隔設定為5 / 2的商，也就是2，則第二次的插入排序對象如下所示：<br>
+<div style="text-align: center;"><img style="width: 229px; height: 74px;" alt="Shell 排序" title="Shell 排序" src="images/shellSort-2.jpg"><br>
 </div>
 <br>
 
-�A�Ӷ��j�]�w��2 / 2 = 1�A���ɴN�O��ª����J�ƧǤF�A�ѩ�j�������������w�j�P�ƧǹL�F�A�ҥH�̫�@�������J�ƧǴX�G�S�@����Ƨǰʧ@�F�G <br>
-<div style="text-align: center;"><img style="width: 225px; height: 66px;" alt="Shell �Ƨ�" title="Shell �Ƨ�" src="images/shellSort-3.jpg"><br>
+再來間隔設定為2 / 2 = 1，此時就是單純的插入排序了，由於大部份的元素都已大致排序過了，所以最後一次的插入排序幾乎沒作什麼排序動作了： <br>
+<div style="text-align: center;"><img style="width: 225px; height: 66px;" alt="Shell 排序" title="Shell 排序" src="images/shellSort-3.jpg"><br>
 <br>
 </div>
 
-�N���j�]�w��n / 2�OD.L
-Shell�̪�Ҵ��X�A�b�Ь�Ѥ��ϥγo�Ӷ��j����n�����A�M��Shell�ƧǪk������b�󶡹j����w�A�ҦpSedgewick�ҩ���ΥH�U�����j�i�H�[
-��Shell�ƧǪk���t�סG <br>
-<div style="text-align: center;"><img style="width: 184px; height: 94px;" alt="Shell �Ƨ�" title="Shell �Ƨ�" src="images/shellSort-4.jpg"><br>
+將間隔設定為n / 2是D.L
+Shell最初所提出，在教科書中使用這個間隔比較好說明，然而Shell排序法的關鍵在於間隔的選定，例如Sedgewick證明選用以下的間隔可以加
+快Shell排序法的速度： <br>
+<div style="text-align: center;"><img style="width: 184px; height: 94px;" alt="Shell 排序" title="Shell 排序" src="images/shellSort-4.jpg"><br>
 </div>
 
-�䤤4*(2<sup>j</sup>)<sup>2</sup> + 3*(2<sup>j</sup>) + 1���i�W�L�����`��n�ȡA�ϥΤW����Xj��N�J4*(2<sup>j</sup>)<sup>2</sup> + 3*(2<sup>j</sup>) + 1�D�o�Ĥ@�Ӷ��j�A�M��N2<sup>j</sup>���H2�N�J�D�o�ĤG�Ӷ��j�A�A�Ө̦������C <br>
+其中4*(2<sup>j</sup>)<sup>2</sup> + 3*(2<sup>j</sup>) + 1不可超過元素總數n值，使用上式找出j後代入4*(2<sup>j</sup>)<sup>2</sup> + 3*(2<sup>j</sup>) + 1求得第一個間隔，然後將2<sup>j</sup>除以2代入求得第二個間隔，再來依此類推。 <br>
 
 <br>
-����٦��H�ҩ����䥦�����j��w�k�i�H�NShell�ƧǪk���t�צA�[�֡F�t�~Shell�ƧǪk�������]�i�H�Ψӧ�}��w�ƧǪk�C<br>
-<h2> ��@</h2>
+後來還有人證明有其它的間隔選定法可以將Shell排序法的速度再加快；另外Shell排序法的概念也可以用來改良氣泡排序法。<br>
+<h2> 實作</h2>
 
 <ul>
   <li> C
   </li>
 </ul>
 
-<pre>#include &lt;stdio.h&gt; <br>#include &lt;stdlib.h&gt; <br>#include &lt;time.h&gt; <br>#define MAX 10 <br>#define SWAP(x,y) {int t; t = x; x = y; y = t;} <br><br>void shellsort(int[]); <br><br>int main(void) { <br>    int number[MAX] = {0}; <br>    int i;  <br><br>    srand(time(NULL)); <br><br>    printf("�Ƨǫe�G"); <br>    for(i = 0; i &lt; MAX; i++) { <br>        number[i] = rand() % 100; <br>        printf("%d ", number[i]); <br>    } <br><br>    shellsort(number); <br><br>    return 0; <br>} <br><br>void shellsort(int number[]) { <br>    int i, j, k, gap, t; <br><br>    gap = MAX / 2; <br><br>    while(gap &gt; 0) { <br>        for(k = 0; k &lt; gap; k++) { <br>            for(i = k+gap; i &lt; MAX; i+=gap) { <br>                for(j = i - gap; j &gt;= k; j-=gap) { <br>                    if(number[j] &gt; number[j+gap]) { <br>                        SWAP(number[j], number[j+gap]); <br>                    } <br>                    else <br>                        break; <br>                } <br>            } <br>        } <br><br>        printf("\ngap = %d�G", gap); <br>        for(i = 0; i &lt; MAX; i++) <br>            printf("%d ", number[i]); <br>        printf("\n"); <br><br>        gap /= 2; <br>    } <br>} <br></pre>
+<pre>#include &lt;stdio.h&gt; <br>#include &lt;stdlib.h&gt; <br>#include &lt;time.h&gt; <br>#define MAX 10 <br>#define SWAP(x,y) {int t; t = x; x = y; y = t;} <br><br>void shellsort(int[]); <br><br>int main(void) { <br>    int number[MAX] = {0}; <br>    int i;  <br><br>    srand(time(NULL)); <br><br>    printf("排序前："); <br>    for(i = 0; i &lt; MAX; i++) { <br>        number[i] = rand() % 100; <br>        printf("%d ", number[i]); <br>    } <br><br>    shellsort(number); <br><br>    return 0; <br>} <br><br>void shellsort(int number[]) { <br>    int i, j, k, gap, t; <br><br>    gap = MAX / 2; <br><br>    while(gap &gt; 0) { <br>        for(k = 0; k &lt; gap; k++) { <br>            for(i = k+gap; i &lt; MAX; i+=gap) { <br>                for(j = i - gap; j &gt;= k; j-=gap) { <br>                    if(number[j] &gt; number[j+gap]) { <br>                        SWAP(number[j], number[j+gap]); <br>                    } <br>                    else <br>                        break; <br>                } <br>            } <br>        } <br><br>        printf("\ngap = %d：", gap); <br>        for(i = 0; i &lt; MAX; i++) <br>            printf("%d ", number[i]); <br>        printf("\n"); <br><br>        gap /= 2; <br>    } <br>} <br></pre>
 
 <br>
 
