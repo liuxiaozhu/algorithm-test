@@ -21,14 +21,14 @@
   
   
   
-  <meta content="text/html; charset=Big5" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 
 
 
   
   
   
-  <title>­I¥]°İÃD¡]Knapsack Problem¡^</title>
+  <title>èƒŒåŒ…å•é¡Œï¼ˆKnapsack Problemï¼‰</title>
 </head>
 
 
@@ -41,13 +41,13 @@ Gossip@caterpillar</a></h3>
 
 
 
-<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: ­I¥]°İÃD¡]Knapsack Problem¡^</a></h1>
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: èƒŒåŒ…å•é¡Œï¼ˆKnapsack Problemï¼‰</a></h1>
 
 
 
-<h2> »¡©ú</h2>
+<h2> èªªæ˜</h2>
 
-°²³]¦³¤@­Ó­I¥]ªº­t­«³Ì¦h¥i¹F8¤½¤ç¡A¦Ó§Æ±æ¦b­I¥]¤¤¸Ë¤J­t­«½d³ò¤º¥i±o¤§Á`»ùª««~¡A°²³]¬O¤ôªG¦n¤F¡A¤ôªGªº½s¸¹¡B³æ»ù»P­«¶q¦p¤U©Ò¥Ü¡G <br>
+å‡è¨­æœ‰ä¸€å€‹èƒŒåŒ…çš„è² é‡æœ€å¤šå¯é”8å…¬æ–¤ï¼Œè€Œå¸Œæœ›åœ¨èƒŒåŒ…ä¸­è£å…¥è² é‡ç¯„åœå…§å¯å¾—ä¹‹ç¸½åƒ¹ç‰©å“ï¼Œå‡è¨­æ˜¯æ°´æœå¥½äº†ï¼Œæ°´æœçš„ç·¨è™Ÿã€å–®åƒ¹èˆ‡é‡é‡å¦‚ä¸‹æ‰€ç¤ºï¼š <br>
 
 <table border="1" width="50%">
 
@@ -57,7 +57,7 @@ Gossip@caterpillar</a></h3>
 
       <td align="left" valign="top"><small>0 </small></td>
 
-      <td align="left" valign="top"><small>§õ¤l </small></td>
+      <td align="left" valign="top"><small>æå­ </small></td>
 
       <td align="left" valign="top"><small>4KG </small></td>
 
@@ -69,7 +69,7 @@ Gossip@caterpillar</a></h3>
 
       <td align="left" valign="top"><small>1 </small></td>
 
-      <td align="left" valign="top"><small>Ä«ªG </small></td>
+      <td align="left" valign="top"><small>è˜‹æœ </small></td>
 
       <td align="left" valign="top"><small>5KG </small></td>
 
@@ -81,7 +81,7 @@ Gossip@caterpillar</a></h3>
 
       <td align="left" valign="top"><small>2 </small></td>
 
-      <td align="left" valign="top"><small>¾ï¤l </small></td>
+      <td align="left" valign="top"><small>æ©˜å­ </small></td>
 
       <td align="left" valign="top"><small>2KG </small></td>
 
@@ -93,7 +93,7 @@ Gossip@caterpillar</a></h3>
 
       <td align="left" valign="top"><small>3 </small></td>
 
-      <td align="left" valign="top"><small>¯ó²ù </small></td>
+      <td align="left" valign="top"><small>è‰è“ </small></td>
 
       <td align="left" valign="top"><small>1KG </small></td>
 
@@ -105,7 +105,7 @@ Gossip@caterpillar</a></h3>
 
       <td align="left" valign="top"><small>4 </small></td>
 
-      <td align="left" valign="top"><small>²¢¥Ê </small></td>
+      <td align="left" valign="top"><small>ç”œç“œ </small></td>
 
       <td align="left" valign="top"><small>6KG </small></td>
 
@@ -119,20 +119,20 @@ Gossip@caterpillar</a></h3>
 
 <p></p>
 
-<h2> ¸Ñªk</h2>
+<h2> è§£æ³•</h2>
 
-­I¥]°İÃD¬OÃö©ó³Ì¨Î¤Æªº°İÃD¡A­n¸Ñ³Ì¨Î¤Æ°İÃD¥i¥H¨Ï¥Î¡u°ÊºA³W¹º¡v¡]Dynamic
-programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯À¥[¤J¦Ü¶°¦X¤¤¡A³Ì«á±o¨ìªº´N¬O³Ì¨Î¸Ñ¡C <br>
-
-<br>
-¥H­I¥]°İÃD¬°¨Ò¡A§Ú­Ì¨Ï¥Î¨â­Ó°}¦Cvalue»Pitem¡Avalueªí¥Ü¥Ø«eªº³Ì¨Î¸Ñ©Ò±o¤§Á`»ù¡Aitemªí¥Ü³Ì«á¤@­Ó©ñ¦Ü­I¥]ªº¤ôªG¡A°²³]¦³­t­«¶q
-1¡ã8ªº­I¥]8­Ó¡A¨Ã¹ï¨C­Ó­I¥]¨D¨ä³Ì¨Î¸Ñ¡C <br>
+èƒŒåŒ…å•é¡Œæ˜¯é—œæ–¼æœ€ä½³åŒ–çš„å•é¡Œï¼Œè¦è§£æœ€ä½³åŒ–å•é¡Œå¯ä»¥ä½¿ç”¨ã€Œå‹•æ…‹è¦åŠƒã€ï¼ˆDynamic
+programmingï¼‰ï¼Œå¾ç©ºé›†åˆé–‹å§‹ï¼Œæ¯å¢åŠ ä¸€å€‹å…ƒç´ å°±å…ˆæ±‚å‡ºè©²éšæ®µçš„æœ€ä½³è§£ï¼Œç›´åˆ°æ‰€æœ‰çš„å…ƒç´ åŠ å…¥è‡³é›†åˆä¸­ï¼Œæœ€å¾Œå¾—åˆ°çš„å°±æ˜¯æœ€ä½³è§£ã€‚ <br>
 
 <br>
-³v¨B±N¤ôªG©ñ¤J­I¥]¤¤¡A¨Ã¨D¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡G<br>
+ä»¥èƒŒåŒ…å•é¡Œç‚ºä¾‹ï¼Œæˆ‘å€‘ä½¿ç”¨å…©å€‹é™£åˆ—valueèˆ‡itemï¼Œvalueè¡¨ç¤ºç›®å‰çš„æœ€ä½³è§£æ‰€å¾—ä¹‹ç¸½åƒ¹ï¼Œitemè¡¨ç¤ºæœ€å¾Œä¸€å€‹æ”¾è‡³èƒŒåŒ…çš„æ°´æœï¼Œå‡è¨­æœ‰è² é‡é‡
+1ï½8çš„èƒŒåŒ…8å€‹ï¼Œä¸¦å°æ¯å€‹èƒŒåŒ…æ±‚å…¶æœ€ä½³è§£ã€‚ <br>
+
+<br>
+é€æ­¥å°‡æ°´æœæ”¾å…¥èƒŒåŒ…ä¸­ï¼Œä¸¦æ±‚è©²éšæ®µçš„æœ€ä½³è§£ï¼š<br>
 
 <ul>
-  <li> ©ñ¤J§õ¤l
+  <li> æ”¾å…¥æå­
   </li>
 </ul>
 
@@ -142,7 +142,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
     <tr>
 
-      <td align="left" valign="top"><small>­I¥]­t­« </small></td>
+      <td align="left" valign="top"><small>èƒŒåŒ…è² é‡ </small></td>
 
       <td align="left" valign="top"><small>1 </small></td>
 
@@ -166,11 +166,11 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
       <td align="left" valign="top"><small>value </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
       <td align="left" valign="top"><small>4500 </small></td>
 
@@ -188,21 +188,21 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
       <td align="left" valign="top"><small>item </small></td>
 
-      <td align="left" valign="top"><small>¡Ğ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¡Ğ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¡Ğ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
     </tr>
 
@@ -213,7 +213,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 <br>
 
 <ul>
-  <li> ©ñ¤JÄ«ªG
+  <li> æ”¾å…¥è˜‹æœ
   </li>
 </ul>
 
@@ -223,7 +223,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
     <tr>
 
-      <td align="left" valign="top"><small>­I¥]­t­« </small></td>
+      <td align="left" valign="top"><small>èƒŒåŒ…è² é‡ </small></td>
 
       <td align="left" valign="top"><small>1 </small></td>
 
@@ -247,11 +247,11 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
       <td align="left" valign="top"><small>value </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
       <td align="left" valign="top"><small>4500 </small></td>
 
@@ -269,21 +269,21 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
       <td align="left" valign="top"><small>item </small></td>
 
-      <td align="left" valign="top"><small>¡Ğ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¡Ğ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¡Ğ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
-
-      <td align="left" valign="top"><small>1 </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
       <td align="left" valign="top"><small>1 </small></td>
 
       <td align="left" valign="top"><small>1 </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>1 </small></td>
+
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
     </tr>
 
@@ -293,7 +293,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
 
 <ul>
-  <li> ©ñ¤J¾ï¤l
+  <li> æ”¾å…¥æ©˜å­
   </li>
 </ul>
 
@@ -303,7 +303,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
     <tr>
 
-      <td align="left" valign="top"><small>­I¥]­t­« </small></td>
+      <td align="left" valign="top"><small>èƒŒåŒ…è² é‡ </small></td>
 
       <td align="left" valign="top"><small>1 </small></td>
 
@@ -327,7 +327,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
       <td align="left" valign="top"><small>value </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
       <td align="left" valign="top"><small>2250 </small></td>
 
@@ -349,13 +349,13 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
       <td align="left" valign="top"><small>item </small></td>
 
-      <td align="left" valign="top"><small>¡Ğ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
       <td align="left" valign="top"><small>2 </small></td>
 
       <td align="left" valign="top"><small>2 </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
       <td align="left" valign="top"><small>1 </small></td>
 
@@ -363,7 +363,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
       <td align="left" valign="top"><small>2 </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
     </tr>
 
@@ -374,7 +374,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 <br>
 
 <ul>
-  <li> ©ñ¤J¯ó²ù
+  <li> æ”¾å…¥è‰è“
   </li>
 </ul>
 
@@ -384,7 +384,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
     <tr>
 
-      <td align="left" valign="top"><small>­I¥]­t­« </small></td>
+      <td align="left" valign="top"><small>èƒŒåŒ…è² é‡ </small></td>
 
       <td align="left" valign="top"><small>1 </small></td>
 
@@ -436,7 +436,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
       <td align="left" valign="top"><small>3 </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
       <td align="left" valign="top"><small>1 </small></td>
 
@@ -455,7 +455,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 <br>
 
 <ul>
-  <li> ©ñ¤J²¢¥Ê
+  <li> æ”¾å…¥ç”œç“œ
   </li>
 </ul>
 
@@ -465,7 +465,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
     <tr>
 
-      <td align="left" valign="top"><small>­I¥]­t­« </small></td>
+      <td align="left" valign="top"><small>èƒŒåŒ…è² é‡ </small></td>
 
       <td align="left" valign="top"><small>1 </small></td>
 
@@ -517,7 +517,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 
       <td align="left" valign="top"><small>3 </small></td>
 
-      <td align="left" valign="top"><small>¢¯ </small></td>
+      <td align="left" valign="top"><small>ï¼ </small></td>
 
       <td align="left" valign="top"><small>1 </small></td>
 
@@ -534,19 +534,19 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
 </table>
 
 <br>
-¥Ñ³Ì«á¤@­Óªí®æ¡A¥i¥H±oª¾¦b­I¥]­t­«8¤½¤ç®É¡A³Ì¦h¥i¥H¸Ë¤J9050¤¸ªº¤ôªG¡A¦Ó³Ì«á¤@­Ó¸Ë¤Jªº
-¤ôªG¬O3¸¹¡A¤]´N¬O¯ó²ù¡A¸Ë¤J¤F¯ó²ù¡A­I¥]¥u¯à¦A©ñ¤J7¤½¤ç¡]8-1¡^ªº¤ôªG¡A©Ò¥H¥²¶·¬İ­I¥]­t­«7¤½¤ç®Éªº³Ì¨Î¸Ñ¡A³Ì«á¤@­Ó©ñ¤Jªº¬O2¸¹¡A¤]´N
-¬O¾ï¤l¡A²{¦b­I¥]³Ñ¤U­t­«¶q5¤½¤ç¡]7-2¡^¡A©Ò¥H¬İ­t­«5¤½¤çªº³Ì¨Î¸Ñ¡A³Ì«á©ñ¤Jªº¬O1¸¹¡A¤]´N¬OÄ«ªG¡A¦¹®É­I¥]­t­«¶q³Ñ¤U0¤½¤ç¡]5-5¡^¡AµLªk
-¦A©ñ¤J¤ôªG¡A©Ò¥H¨D¥X³Ì¨Î¸Ñ¬°©ñ¤J¯ó²ù¡B¾ï¤l»PÄ«ªG¡A¦ÓÁ`»ù¬°9050¤¸¡C<br>
+ç”±æœ€å¾Œä¸€å€‹è¡¨æ ¼ï¼Œå¯ä»¥å¾—çŸ¥åœ¨èƒŒåŒ…è² é‡8å…¬æ–¤æ™‚ï¼Œæœ€å¤šå¯ä»¥è£å…¥9050å…ƒçš„æ°´æœï¼Œè€Œæœ€å¾Œä¸€å€‹è£å…¥çš„
+æ°´æœæ˜¯3è™Ÿï¼Œä¹Ÿå°±æ˜¯è‰è“ï¼Œè£å…¥äº†è‰è“ï¼ŒèƒŒåŒ…åªèƒ½å†æ”¾å…¥7å…¬æ–¤ï¼ˆ8-1ï¼‰çš„æ°´æœï¼Œæ‰€ä»¥å¿…é ˆçœ‹èƒŒåŒ…è² é‡7å…¬æ–¤æ™‚çš„æœ€ä½³è§£ï¼Œæœ€å¾Œä¸€å€‹æ”¾å…¥çš„æ˜¯2è™Ÿï¼Œä¹Ÿå°±
+æ˜¯æ©˜å­ï¼Œç¾åœ¨èƒŒåŒ…å‰©ä¸‹è² é‡é‡5å…¬æ–¤ï¼ˆ7-2ï¼‰ï¼Œæ‰€ä»¥çœ‹è² é‡5å…¬æ–¤çš„æœ€ä½³è§£ï¼Œæœ€å¾Œæ”¾å…¥çš„æ˜¯1è™Ÿï¼Œä¹Ÿå°±æ˜¯è˜‹æœï¼Œæ­¤æ™‚èƒŒåŒ…è² é‡é‡å‰©ä¸‹0å…¬æ–¤ï¼ˆ5-5ï¼‰ï¼Œç„¡æ³•
+å†æ”¾å…¥æ°´æœï¼Œæ‰€ä»¥æ±‚å‡ºæœ€ä½³è§£ç‚ºæ”¾å…¥è‰è“ã€æ©˜å­èˆ‡è˜‹æœï¼Œè€Œç¸½åƒ¹ç‚º9050å…ƒã€‚<br>
 <br>
-<h2> ¹ê§@</h2>
+<h2> å¯¦ä½œ</h2>
 
 <ul>
   <li> C
   </li>
 </ul>
 
-<pre>#include &lt;stdio.h&gt; <br>#include &lt;stdlib.h&gt; <br><br>#define LIMIT 8   // ­«¶q­­¨î <br>#define N 5       // ª««~ºØÃş <br>#define MIN 1     // ³Ì¤p­«¶q <br><br>struct body { <br>    char name[20]; <br>    int size; <br>    int price; <br>}; <br><br>typedef struct body object; <br><br>int main(void) { <br>    int item[LIMIT+1] = {0}; <br>    int value[LIMIT+1] = {0}; <br>    int newvalue, i, s, p; <br><br>    object a[] = {{"§õ¤l", 4, 4500}, <br>                  {"Ä«ªG", 5, 5700}, <br>                  {"¾ï¤l", 2, 2250}, <br>                  {"¯ó²ù", 1, 1100}, <br>                  {"²¢¥Ê", 6, 6700}}; <br><br>    for(i = 0; i &lt; N; i++) { <br>        for(s = a[i].size; s &lt;= LIMIT; s++) { <br>            p = s - a[i].size; <br>            newvalue = value[p] + a[i].price; <br>            if(newvalue &gt; value[s]) {// §ä¨ì¶¥¬q³Ì¨Î¸Ñ <br>                value[s] = newvalue; <br>                item[s] = i; <br>            } <br>        } <br>    } <br><br>    printf("ª««~\t»ù®æ\n"); <br>    for(i = LIMIT; i &gt;= MIN; i = i - a[item[i]].size) { <br>        printf("%s\t%d\n", <br>                  a[item[i]].name, a[item[i]].price); <br>    } <br><br>    printf("¦X­p\t%d\n", value[LIMIT]); <br><br>    return 0; <br>}  <br></pre>
+<pre>#include &lt;stdio.h&gt; <br>#include &lt;stdlib.h&gt; <br><br>#define LIMIT 8   // é‡é‡é™åˆ¶ <br>#define N 5       // ç‰©å“ç¨®é¡ <br>#define MIN 1     // æœ€å°é‡é‡ <br><br>struct body { <br>    char name[20]; <br>    int size; <br>    int price; <br>}; <br><br>typedef struct body object; <br><br>int main(void) { <br>    int item[LIMIT+1] = {0}; <br>    int value[LIMIT+1] = {0}; <br>    int newvalue, i, s, p; <br><br>    object a[] = {{"æå­", 4, 4500}, <br>                  {"è˜‹æœ", 5, 5700}, <br>                  {"æ©˜å­", 2, 2250}, <br>                  {"è‰è“", 1, 1100}, <br>                  {"ç”œç“œ", 6, 6700}}; <br><br>    for(i = 0; i &lt; N; i++) { <br>        for(s = a[i].size; s &lt;= LIMIT; s++) { <br>            p = s - a[i].size; <br>            newvalue = value[p] + a[i].price; <br>            if(newvalue &gt; value[s]) {// æ‰¾åˆ°éšæ®µæœ€ä½³è§£ <br>                value[s] = newvalue; <br>                item[s] = i; <br>            } <br>        } <br>    } <br><br>    printf("ç‰©å“\tåƒ¹æ ¼\n"); <br>    for(i = LIMIT; i &gt;= MIN; i = i - a[item[i]].size) { <br>        printf("%s\t%d\n", <br>                  a[item[i]].name, a[item[i]].price); <br>    } <br><br>    printf("åˆè¨ˆ\t%d\n", value[LIMIT]); <br><br>    return 0; <br>}  <br></pre>
 
 <br>
 
@@ -555,7 +555,7 @@ programming¡^¡A±qªÅ¶°¦X¶}©l¡A¨C¼W¥[¤@­Ó¤¸¯À´N¥ı¨D¥X¸Ó¶¥¬qªº³Ì¨Î¸Ñ¡Aª½¨ì©Ò¦³ªº¤¸¯
   </li>
 </ul>
 
-<pre>class Fruit {<br>    private String name;<br>    private int size;<br>    private int price;<br>    <br>    public Fruit(String name, int size, int price) {<br>        this.name = name;<br>        this.size = size;<br>        this.price = price;<br>    }<br>    <br>    public String getName() {<br>        return name;<br>    }<br><br>    public int getPrice() {<br>        return price;<br>    }<br><br>    public int getSize() {<br>        return size;<br>    }<br>}<br><br>public class Knapsack {<br>    public static void main(String[] args) {<br>        final int MAX = 8;<br>        final int MIN = 1;<br>        int[] item = new int[MAX+1]; <br>        int[] value = new int[MAX+1];  <br><br>        Fruit fruits[] = {<br>                new Fruit("§õ¤l", 4, 4500), <br>                new Fruit("Ä«ªG", 5, 5700), <br>                new Fruit("¾ï¤l", 2, 2250), <br>                new Fruit("¯ó²ù", 1, 1100), <br>                new Fruit("²¢¥Ê", 6, 6700)}; <br><br>        for(int i = 0; i &lt; fruits.length; i++) { <br>            for(int s = fruits[i].getSize(); s &lt;= MAX; s++) { <br>                int p = s - fruits[i].getSize(); <br>                int newvalue = value[p] + <br>                                   fruits[i].getPrice(); <br>                if(newvalue &gt; value[s]) {// §ä¨ì¶¥¬q³Ì¨Î¸Ñ <br>                    value[s] = newvalue; <br>                    item[s] = i; <br>                } <br>            } <br>        } <br><br>        System.out.println("ª««~\t»ù®æ"); <br>        for(int i = MAX; <br>            i &gt;= MIN; <br>            i = i - fruits[item[i]].getSize()) { <br>            System.out.println(fruits[item[i]].getName()+ <br>                    "\t" + fruits[item[i]].getPrice()); <br>        } <br><br>        System.out.println("¦X­p\t" + value[MAX]);  <br>    }<br>}</pre>
+<pre>class Fruit {<br>    private String name;<br>    private int size;<br>    private int price;<br>    <br>    public Fruit(String name, int size, int price) {<br>        this.name = name;<br>        this.size = size;<br>        this.price = price;<br>    }<br>    <br>    public String getName() {<br>        return name;<br>    }<br><br>    public int getPrice() {<br>        return price;<br>    }<br><br>    public int getSize() {<br>        return size;<br>    }<br>}<br><br>public class Knapsack {<br>    public static void main(String[] args) {<br>        final int MAX = 8;<br>        final int MIN = 1;<br>        int[] item = new int[MAX+1]; <br>        int[] value = new int[MAX+1];  <br><br>        Fruit fruits[] = {<br>                new Fruit("æå­", 4, 4500), <br>                new Fruit("è˜‹æœ", 5, 5700), <br>                new Fruit("æ©˜å­", 2, 2250), <br>                new Fruit("è‰è“", 1, 1100), <br>                new Fruit("ç”œç“œ", 6, 6700)}; <br><br>        for(int i = 0; i &lt; fruits.length; i++) { <br>            for(int s = fruits[i].getSize(); s &lt;= MAX; s++) { <br>                int p = s - fruits[i].getSize(); <br>                int newvalue = value[p] + <br>                                   fruits[i].getPrice(); <br>                if(newvalue &gt; value[s]) {// æ‰¾åˆ°éšæ®µæœ€ä½³è§£ <br>                    value[s] = newvalue; <br>                    item[s] = i; <br>                } <br>            } <br>        } <br><br>        System.out.println("ç‰©å“\tåƒ¹æ ¼"); <br>        for(int i = MAX; <br>            i &gt;= MIN; <br>            i = i - fruits[item[i]].getSize()) { <br>            System.out.println(fruits[item[i]].getName()+ <br>                    "\t" + fruits[item[i]].getPrice()); <br>        } <br><br>        System.out.println("åˆè¨ˆ\t" + value[MAX]);  <br>    }<br>}</pre>
 <br>
 <br>
 <br>
