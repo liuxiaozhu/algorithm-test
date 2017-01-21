@@ -21,14 +21,14 @@
   
   
   
-  <meta content="text/html; charset=Big5" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 
 
 
   
   
   
-  <title>¦Ñ¹«¨«°g©x¡]¤G¡^</title>
+  <title>è€é¼ èµ°è¿·å®˜ï¼ˆäºŒï¼‰</title>
 </head>
 
 
@@ -41,27 +41,27 @@ Gossip@caterpillar</a></h3>
 
 
 
-<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: ¦Ñ¹«¨«°g©x¡]¤G¡^</a></h1>
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: è€é¼ èµ°è¿·å®˜ï¼ˆäºŒï¼‰</a></h1>
 
 
 
-<h2>&nbsp;»¡©ú</h2>
-¥Ñ©ó°g®cªº³]­p¡A¦Ñ¹«¨«°g®cªº¤J¤f¦Ü¥X¤f¸ô®|¥i¯à¤£¥u¤@±ø¡A¦p¦ó¨D¥X©Ò¦³ªº¸ô®|©O¡H<br>
-<h2>¸Ñªk</h2>
-¨D©Ò¦³¸ô®|¬İ°_¨Ó½ÆÂø¦ı¨ä¹ê§óÂ²³æ¡A¥u­n¦b¦Ñ¹«¨«¦Ü¥X¤f®ÉÅã¥Ü¸g¹Lªº¸ô®|¡AµM«á°h¦^¤W¤@®æ­«·s¿ï¾Ü¤U¤@­Ó¦ì¸mÄ~Äò»¼°j´N¥i¥H¤F¡A¤ñ¨D¥X³æ¤@¸ô®|ÁÙÂ²³æ¡A§Ú­Ìªºµ{¦¡¥u­n§@¤@ÂI­×§ï´N¥i¥H¤F¡C <br>
-<h2> ºtºâªk</h2>
+<h2>&nbsp;èªªæ˜</h2>
+ç”±æ–¼è¿·å®®çš„è¨­è¨ˆï¼Œè€é¼ èµ°è¿·å®®çš„å…¥å£è‡³å‡ºå£è·¯å¾‘å¯èƒ½ä¸åªä¸€æ¢ï¼Œå¦‚ä½•æ±‚å‡ºæ‰€æœ‰çš„è·¯å¾‘å‘¢ï¼Ÿ<br>
+<h2>è§£æ³•</h2>
+æ±‚æ‰€æœ‰è·¯å¾‘çœ‹èµ·ä¾†è¤‡é›œä½†å…¶å¯¦æ›´ç°¡å–®ï¼Œåªè¦åœ¨è€é¼ èµ°è‡³å‡ºå£æ™‚é¡¯ç¤ºç¶“éçš„è·¯å¾‘ï¼Œç„¶å¾Œé€€å›ä¸Šä¸€æ ¼é‡æ–°é¸æ“‡ä¸‹ä¸€å€‹ä½ç½®ç¹¼çºŒéè¿´å°±å¯ä»¥äº†ï¼Œæ¯”æ±‚å‡ºå–®ä¸€è·¯å¾‘é‚„ç°¡å–®ï¼Œæˆ‘å€‘çš„ç¨‹å¼åªè¦ä½œä¸€é»ä¿®æ”¹å°±å¯ä»¥äº†ã€‚ <br>
+<h2> æ¼”ç®—æ³•</h2>
 
 <pre>Procedure GO(maze[]) [<br>    VISIT(maze, STARTI, STARTJ);<br>]<br>    <br>Procedure VISIT(maze[], i, j) [<br>    maze[i][j] = 1; <br><br>    IF(i == ENDI AND j == ENDJ) [<br>        // FIND A ROUTE, PRINT THE ROUTE<br>    ]<br><br>    IF(maze[i][j+1] == 0)<br>        VISIT(maze, i, j+1); <br>    IF(maze[i+1][j] == 0)<br>        VISIT(maze, i+1, j); <br>    IF(maze[i][j-1] == 0)<br>        VISIT(maze, i, j-1); <br>    if(maze[i-1][j] == 0)<br>        VISIT(maze, i-1, j); <br><br>    maze[i][j] = 0; <br>] <br></pre>
 
 
-<h2> ¹ê§@</h2>
+<h2> å¯¦ä½œ</h2>
 
 <ul>
   <li> C
   </li>
 </ul>
 
-<pre>#include &lt;stdio.h&gt;<br>#include &lt;stdlib.h&gt; <br><br>void visit(int, int);<br><br>int maze[9][9] = {{2, 2, 2, 2, 2, 2, 2, 2, 2},<br>                  {2, 0, 0, 0, 0, 0, 0, 0, 2},<br>                  {2, 0, 2, 2, 0, 2, 2, 0, 2},<br>                  {2, 0, 2, 0, 0, 2, 0, 0, 2},<br>                  {2, 0, 2, 0, 2, 0, 2, 0, 2},<br>                  {2, 0, 0, 0, 0, 0, 2, 0, 2},<br>                  {2, 2, 0, 2, 2, 0, 2, 2, 2},<br>                  {2, 0, 0, 0, 0, 0, 0, 0, 2},<br>                  {2, 2, 2, 2, 2, 2, 2, 2, 2}};<br><br>int startI = 1, startJ = 1;  // ¤J¤f<br>int endI = 7, endJ = 7;  // ¥X¤f<br><br>int main(void) { <br>    int i, j; <br><br>    printf("Åã¥Ü°g®c¡G\n"); <br>    for(i = 0; i &lt; 7; i++) { <br>        for(j = 0; j &lt; 7; j++) <br>            if(maze[i][j] == 2) <br>                printf("¢i"); <br>            else <br>                printf("  "); <br>        printf("\n"); <br>    } <br><br>    visit(startI, startJ);<br><br>    return 0; <br>} <br><br>void visit(int i, int j) {<br>    int m, n;<br><br>    maze[i][j] = 1; <br><br>    if(i == endI &amp;&amp; j == endJ) {<br>        printf("\nÅã¥Ü¸ô®|¡G\n");<br>        for(m = 0; m &lt; 9; m++) {<br>            for(n = 0; n &lt; 9; n++)<br>                if(maze[m][n] == 2)<br>                    printf("¢i");<br>                else if(maze[m][n] == 1)<br>                    printf("¡º");<br>                else<br>                    printf("  ");<br>            printf("\n");<br>        }<br>    }<br><br>    if(maze[i][j+1] == 0) visit(i, j+1);<br>    if(maze[i+1][j] == 0) visit(i+1, j);<br>    if(maze[i][j-1] == 0) visit(i, j-1);<br>    if(maze[i-1][j] == 0) visit(i-1, j);<br><br>    maze[i][j] = 0;<br>}  <br></pre>
+<pre>#include &lt;stdio.h&gt;<br>#include &lt;stdlib.h&gt; <br><br>void visit(int, int);<br><br>int maze[9][9] = {{2, 2, 2, 2, 2, 2, 2, 2, 2},<br>                  {2, 0, 0, 0, 0, 0, 0, 0, 2},<br>                  {2, 0, 2, 2, 0, 2, 2, 0, 2},<br>                  {2, 0, 2, 0, 0, 2, 0, 0, 2},<br>                  {2, 0, 2, 0, 2, 0, 2, 0, 2},<br>                  {2, 0, 0, 0, 0, 0, 2, 0, 2},<br>                  {2, 2, 0, 2, 2, 0, 2, 2, 2},<br>                  {2, 0, 0, 0, 0, 0, 0, 0, 2},<br>                  {2, 2, 2, 2, 2, 2, 2, 2, 2}};<br><br>int startI = 1, startJ = 1;  // å…¥å£<br>int endI = 7, endJ = 7;  // å‡ºå£<br><br>int main(void) { <br>    int i, j; <br><br>    printf("é¡¯ç¤ºè¿·å®®ï¼š\n"); <br>    for(i = 0; i &lt; 7; i++) { <br>        for(j = 0; j &lt; 7; j++) <br>            if(maze[i][j] == 2) <br>                printf("â–ˆ"); <br>            else <br>                printf("  "); <br>        printf("\n"); <br>    } <br><br>    visit(startI, startJ);<br><br>    return 0; <br>} <br><br>void visit(int i, int j) {<br>    int m, n;<br><br>    maze[i][j] = 1; <br><br>    if(i == endI &amp;&amp; j == endJ) {<br>        printf("\né¡¯ç¤ºè·¯å¾‘ï¼š\n");<br>        for(m = 0; m &lt; 9; m++) {<br>            for(n = 0; n &lt; 9; n++)<br>                if(maze[m][n] == 2)<br>                    printf("â–ˆ");<br>                else if(maze[m][n] == 1)<br>                    printf("â—‡");<br>                else<br>                    printf("  ");<br>            printf("\n");<br>        }<br>    }<br><br>    if(maze[i][j+1] == 0) visit(i, j+1);<br>    if(maze[i+1][j] == 0) visit(i+1, j);<br>    if(maze[i][j-1] == 0) visit(i, j-1);<br>    if(maze[i-1][j] == 0) visit(i-1, j);<br><br>    maze[i][j] = 0;<br>}  <br></pre>
 
 <br>
 
@@ -70,7 +70,7 @@ Gossip@caterpillar</a></h3>
   </li>
 </ul>
 
-<pre>public class Mouse {<br>    private int startI, startJ;  // ¤J¤f <br>    private int endI, endJ;  // ¥X¤f<br>    <br>    public static void main(String[] args) {<br>        int maze[][] = {{2, 2, 2, 2, 2, 2, 2, 2, 2},<br>                        {2, 0, 0, 0, 0, 0, 0, 0, 2},<br>                        {2, 0, 2, 2, 0, 2, 2, 0, 2},<br>                        {2, 0, 2, 0, 0, 2, 0, 0, 2},<br>                        {2, 0, 2, 0, 2, 0, 2, 0, 2},<br>                        {2, 0, 0, 0, 0, 0, 2, 0, 2},<br>                        {2, 2, 0, 2, 2, 0, 2, 2, 2},<br>                        {2, 0, 0, 0, 0, 0, 0, 0, 2},<br>                        {2, 2, 2, 2, 2, 2, 2, 2, 2}};<br>        <br>        System.out.println("Åã¥Ü°g®c¡G"); <br>        for(int i = 0; i &lt; maze.length; i++) { <br>            for(int j = 0; j &lt; maze[0].length; j++) <br>                if(maze[i][j] == 2) <br>                    System.out.print("¢i"); <br>                else <br>                    System.out.print("  "); <br>            System.out.println(); <br>        }<br><br>        Mouse mouse = new Mouse();<br>        mouse.setStart(1, 1);<br>        mouse.setEnd(7, 7);<br>        <br>        mouse.go(maze);<br>    }<br>    <br>    public void setStart(int i, int j) {<br>        this.startI = i;<br>        this.startJ = j;<br>    }<br>    <br>    public void setEnd(int i, int j) {<br>        this.endI = i;<br>        this.endJ = j;<br>    }<br>    <br>    public void go(int[][] maze) {<br>        visit(maze, startI, startJ);<br>    }<br>    <br>    private void visit(int[][] maze, int i, int j) {<br>        maze[i][j] = 1; <br><br>        if(i == endI &amp;&amp; j == endJ) {<br>            System.out.println("\n§ä¨ì¥X¤f¡I");<br>            for(int m = 0; m &lt; maze.length; m++) { <br>                for(int n = 0; n &lt; maze[0].length; n++) { <br>                    if(maze[m][n] == 2) <br>                        System.out.print("¢i"); <br>                    else if(maze[m][n] == 1) <br>                        System.out.print("¡º"); <br>                    else <br>                        System.out.print("  "); <br>                } <br>                System.out.println();<br>            }<br>        }<br><br>        if(maze[i][j+1] == 0) <br>            visit(maze, i, j+1); <br>        if(maze[i+1][j] == 0)<br>            visit(maze, i+1, j); <br>        if(maze[i][j-1] == 0)<br>            visit(maze, i, j-1); <br>        if(maze[i-1][j] == 0)<br>            visit(maze, i-1, j); <br>       <br>        maze[i][j] = 0;<br>    }<br>}</pre>
+<pre>public class Mouse {<br>    private int startI, startJ;  // å…¥å£ <br>    private int endI, endJ;  // å‡ºå£<br>    <br>    public static void main(String[] args) {<br>        int maze[][] = {{2, 2, 2, 2, 2, 2, 2, 2, 2},<br>                        {2, 0, 0, 0, 0, 0, 0, 0, 2},<br>                        {2, 0, 2, 2, 0, 2, 2, 0, 2},<br>                        {2, 0, 2, 0, 0, 2, 0, 0, 2},<br>                        {2, 0, 2, 0, 2, 0, 2, 0, 2},<br>                        {2, 0, 0, 0, 0, 0, 2, 0, 2},<br>                        {2, 2, 0, 2, 2, 0, 2, 2, 2},<br>                        {2, 0, 0, 0, 0, 0, 0, 0, 2},<br>                        {2, 2, 2, 2, 2, 2, 2, 2, 2}};<br>        <br>        System.out.println("é¡¯ç¤ºè¿·å®®ï¼š"); <br>        for(int i = 0; i &lt; maze.length; i++) { <br>            for(int j = 0; j &lt; maze[0].length; j++) <br>                if(maze[i][j] == 2) <br>                    System.out.print("â–ˆ"); <br>                else <br>                    System.out.print("  "); <br>            System.out.println(); <br>        }<br><br>        Mouse mouse = new Mouse();<br>        mouse.setStart(1, 1);<br>        mouse.setEnd(7, 7);<br>        <br>        mouse.go(maze);<br>    }<br>    <br>    public void setStart(int i, int j) {<br>        this.startI = i;<br>        this.startJ = j;<br>    }<br>    <br>    public void setEnd(int i, int j) {<br>        this.endI = i;<br>        this.endJ = j;<br>    }<br>    <br>    public void go(int[][] maze) {<br>        visit(maze, startI, startJ);<br>    }<br>    <br>    private void visit(int[][] maze, int i, int j) {<br>        maze[i][j] = 1; <br><br>        if(i == endI &amp;&amp; j == endJ) {<br>            System.out.println("\næ‰¾åˆ°å‡ºå£ï¼");<br>            for(int m = 0; m &lt; maze.length; m++) { <br>                for(int n = 0; n &lt; maze[0].length; n++) { <br>                    if(maze[m][n] == 2) <br>                        System.out.print("â–ˆ"); <br>                    else if(maze[m][n] == 1) <br>                        System.out.print("â—‡"); <br>                    else <br>                        System.out.print("  "); <br>                } <br>                System.out.println();<br>            }<br>        }<br><br>        if(maze[i][j+1] == 0) <br>            visit(maze, i, j+1); <br>        if(maze[i+1][j] == 0)<br>            visit(maze, i+1, j); <br>        if(maze[i][j-1] == 0)<br>            visit(maze, i, j-1); <br>        if(maze[i-1][j] == 0)<br>            visit(maze, i-1, j); <br>       <br>        maze[i][j] = 0;<br>    }<br>}</pre>
 <br>
 
 
