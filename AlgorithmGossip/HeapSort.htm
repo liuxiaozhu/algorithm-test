@@ -33,7 +33,7 @@
   
   
   
-  <meta content="text/html; charset=Big5" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 
 
 
@@ -44,7 +44,7 @@
   
   
   
-  <title>Heap ±Æ§Çªk - §ï¨}ªº¿ï¾Ü±Æ§Ç</title>
+  <title>Heap æ’åºæ³• - æ”¹è‰¯çš„é¸æ“‡æ’åº</title>
 </head>
 
 
@@ -61,58 +61,58 @@ Gossip@caterpillar</a></h3>
 
 
 
-<h1><a href="AlgorithmGossip.htm">Algorithm Gossip:&nbsp;Heap ±Æ§Çªk - §ï¨}ªº¿ï¾Ü±Æ§Ç</a></h1>
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip:&nbsp;Heap æ’åºæ³• - æ”¹è‰¯çš„é¸æ“‡æ’åº</a></h1>
 
 
 
 
 
-<h2>»¡©ú</h2>
-¿ï¾Ü±Æ§Çªkªº·§©ÀÂ²³æ¡A¨C¦¸±q¥¼±Æ§Ç³¡¥÷¿ï¤@³Ì¤p­È¡A´¡¤J¤w±Æ§Ç³¡¥÷ªº«áºİ¡A¨ä®É¶¡¥D­nªá¶O©ó¦b¾ã­Ó¥¼±Æ§Ç³¡¥÷´M§ä³Ì¤p­È¡A¦pªG¯àÅı·j´M³Ì¤p­Èªº¤è¦¡¥[
-§Ö¡A¿ï¾Ü±Æ§Çªkªº³t²v¤]´N¥i¥H¥[§Ö¡AHeap±Æ§ÇªkÅı·j´Mªº¸ô®|¥Ñ¾ğ®Ú¦Ü³Ì«á¤@­Ó¾ğ¸­¡A¦Ó¤£¬O¾ã­Ó¥¼±Æ§Ç³¡¥÷¡A¦]¦ÓºÙ¤§¬°§ï¨}ªº¿ï¾Ü±Æ§Çªk¡C<br>
-<h2>¸Ñªk</h2>
-Heap±Æ§Çªk¨Ï¥ÎHeap
-Tree¡]°ï¿n¾ğ¡^¡A¾ğ¬O¤@ºØ¸ê®Æµ²ºc¡A¦Ó°ï¿n¾ğ¬O¤@­Ó¤G¤¸¾ğ¡A¤]´N¬O¨C¤@­Ó¤÷¸`ÂI³Ì¦h¥u¦³¨â­Ó¤l¸`ÂI¡]Ãö©ó¾ğªº¸Ô²Ó©w¸qÁÙ½Ğ¨£¸ê®Æµ²ºc®ÑÄy¡^¡A°ï¿n¾ğªº
-¤÷¸`ÂI­Y¤p©ó¤l¸`ÂI¡A«hºÙ¤§¬°³Ì¤p°ï¿n¡]Min Heap¡^¡A¤÷¸`ÂI­Y¤j©ó¤l¸`ÂI¡A«hºÙ¤§¬°³Ì¤j°ï¿n¡]Max
-Heap¡^¡A¦Ó¦P¤@¼hªº¤l¸`ÂI«hµL»İ²z·|¨ä¤j¤pÃö«Y¡A¨Ò¦p¤U­±´N¬O¤@­Ó°ï¿n¾ğ¡G <br>
+<h2>èªªæ˜</h2>
+é¸æ“‡æ’åºæ³•çš„æ¦‚å¿µç°¡å–®ï¼Œæ¯æ¬¡å¾æœªæ’åºéƒ¨ä»½é¸ä¸€æœ€å°å€¼ï¼Œæ’å…¥å·²æ’åºéƒ¨ä»½çš„å¾Œç«¯ï¼Œå…¶æ™‚é–“ä¸»è¦èŠ±è²»æ–¼åœ¨æ•´å€‹æœªæ’åºéƒ¨ä»½å°‹æ‰¾æœ€å°å€¼ï¼Œå¦‚æœèƒ½è®“æœå°‹æœ€å°å€¼çš„æ–¹å¼åŠ 
+å¿«ï¼Œé¸æ“‡æ’åºæ³•çš„é€Ÿç‡ä¹Ÿå°±å¯ä»¥åŠ å¿«ï¼ŒHeapæ’åºæ³•è®“æœå°‹çš„è·¯å¾‘ç”±æ¨¹æ ¹è‡³æœ€å¾Œä¸€å€‹æ¨¹è‘‰ï¼Œè€Œä¸æ˜¯æ•´å€‹æœªæ’åºéƒ¨ä»½ï¼Œå› è€Œç¨±ä¹‹ç‚ºæ”¹è‰¯çš„é¸æ“‡æ’åºæ³•ã€‚<br>
+<h2>è§£æ³•</h2>
+Heapæ’åºæ³•ä½¿ç”¨Heap
+Treeï¼ˆå †ç©æ¨¹ï¼‰ï¼Œæ¨¹æ˜¯ä¸€ç¨®è³‡æ–™çµæ§‹ï¼Œè€Œå †ç©æ¨¹æ˜¯ä¸€å€‹äºŒå…ƒæ¨¹ï¼Œä¹Ÿå°±æ˜¯æ¯ä¸€å€‹çˆ¶ç¯€é»æœ€å¤šåªæœ‰å…©å€‹å­ç¯€é»ï¼ˆé—œæ–¼æ¨¹çš„è©³ç´°å®šç¾©é‚„è«‹è¦‹è³‡æ–™çµæ§‹æ›¸ç±ï¼‰ï¼Œå †ç©æ¨¹çš„
+çˆ¶ç¯€é»è‹¥å°æ–¼å­ç¯€é»ï¼Œå‰‡ç¨±ä¹‹ç‚ºæœ€å°å †ç©ï¼ˆMin Heapï¼‰ï¼Œçˆ¶ç¯€é»è‹¥å¤§æ–¼å­ç¯€é»ï¼Œå‰‡ç¨±ä¹‹ç‚ºæœ€å¤§å †ç©ï¼ˆMax
+Heapï¼‰ï¼Œè€ŒåŒä¸€å±¤çš„å­ç¯€é»å‰‡ç„¡éœ€ç†æœƒå…¶å¤§å°é—œä¿‚ï¼Œä¾‹å¦‚ä¸‹é¢å°±æ˜¯ä¸€å€‹å †ç©æ¨¹ï¼š <br>
 
 
-<div style="text-align: center;"><img style="width: 284px; height: 152px;" alt="Heap ±Æ§Ç" title="Heap ±Æ§Ç" src="images/heapSort-1.jpg"></div>
+<div style="text-align: center;"><img style="width: 284px; height: 152px;" alt="Heap æ’åº" title="Heap æ’åº" src="images/heapSort-1.jpg"></div>
 <br>
-¥i¥H¨Ï¥Î¤@ºû°}¦C¨ÓÀx¦s°ï¿n¾ğªº©Ò¦³¤¸¯À»P¨ä¶¶§Ç¡A¬°¤F­pºâ¤è«K¡A¨Ï¥Îªº°_©l¯Á¤Ş¬O1¦Ó¤£¬O0¡A¯Á¤Ş1¬O¾ğ®Ú¦ì¸m¡A¦pªG¥ª¤l¸`ÂIÀx¦s¦b°}¦C¤¤ªº¯Á¤Ş¬°s¡A«h¨ä¤÷¸`ÂIªº¯Á¤Ş¬°s/2¡A¦Ó¥k¤l¸`ÂI¬°s+1¡A´N¦p¤W¹Ï©Ò¥Ü¡A±N¤W¹Ïªº°ï¿n¾ğÂà´«¬°¤@ºû°}¦C¤§«á¦p¤U©Ò¥Ü¡G <br>
-<div style="text-align: center;"><img style="width: 286px; height: 55px;" alt="Heap ±Æ§Ç" title="Heap ±Æ§Ç" src="images/heapSort-2.jpg"></div>
+å¯ä»¥ä½¿ç”¨ä¸€ç¶­é™£åˆ—ä¾†å„²å­˜å †ç©æ¨¹çš„æ‰€æœ‰å…ƒç´ èˆ‡å…¶é †åºï¼Œç‚ºäº†è¨ˆç®—æ–¹ä¾¿ï¼Œä½¿ç”¨çš„èµ·å§‹ç´¢å¼•æ˜¯1è€Œä¸æ˜¯0ï¼Œç´¢å¼•1æ˜¯æ¨¹æ ¹ä½ç½®ï¼Œå¦‚æœå·¦å­ç¯€é»å„²å­˜åœ¨é™£åˆ—ä¸­çš„ç´¢å¼•ç‚ºsï¼Œå‰‡å…¶çˆ¶ç¯€é»çš„ç´¢å¼•ç‚ºs/2ï¼Œè€Œå³å­ç¯€é»ç‚ºs+1ï¼Œå°±å¦‚ä¸Šåœ–æ‰€ç¤ºï¼Œå°‡ä¸Šåœ–çš„å †ç©æ¨¹è½‰æ›ç‚ºä¸€ç¶­é™£åˆ—ä¹‹å¾Œå¦‚ä¸‹æ‰€ç¤ºï¼š <br>
+<div style="text-align: center;"><img style="width: 286px; height: 55px;" alt="Heap æ’åº" title="Heap æ’åº" src="images/heapSort-2.jpg"></div>
 <br>
-­º¥ı¥²¶·ª¾¹D¦p¦ó«Ø¥ß°ï¿n¾ğ¡A¥[¦Ü°ï¿n¾ğªº¤¸¯À·|¥ı©ñ¸m¦b³Ì«á¤@­Ó¾ğ¸­¸`ÂI¦ì¸m¡AµM«áÀË¬d¤÷¸`ÂI¬O§_¤p©ó¤l¸`ÂI¡]³Ì¤p°ï¿n¡^¡A±N¤pªº¤¸¯À¤£Â_»P¤÷¸`ÂI¥æ´«¡Aª½¨ìº¡¨¬°ï¿n¾ğªº±ø¥ó¬°¤î¡A¨Ò¦p¦b¤W¹Ïªº°ï¿n¥[¤J¤@­Ó¤¸¯À12¡A«h°ï¿n¾ğªº½Õ¾ã¤è¦¡¦p¤U©Ò¥Ü¡G<br>
-<div style="text-align: center;"><img style="width: 574px; height: 154px;" alt="Heap ±Æ§Ç" title="Heap ±Æ§Ç" src="images/heapSort-3.jpg"></div>
+é¦–å…ˆå¿…é ˆçŸ¥é“å¦‚ä½•å»ºç«‹å †ç©æ¨¹ï¼ŒåŠ è‡³å †ç©æ¨¹çš„å…ƒç´ æœƒå…ˆæ”¾ç½®åœ¨æœ€å¾Œä¸€å€‹æ¨¹è‘‰ç¯€é»ä½ç½®ï¼Œç„¶å¾Œæª¢æŸ¥çˆ¶ç¯€é»æ˜¯å¦å°æ–¼å­ç¯€é»ï¼ˆæœ€å°å †ç©ï¼‰ï¼Œå°‡å°çš„å…ƒç´ ä¸æ–·èˆ‡çˆ¶ç¯€é»äº¤æ›ï¼Œç›´åˆ°æ»¿è¶³å †ç©æ¨¹çš„æ¢ä»¶ç‚ºæ­¢ï¼Œä¾‹å¦‚åœ¨ä¸Šåœ–çš„å †ç©åŠ å…¥ä¸€å€‹å…ƒç´ 12ï¼Œå‰‡å †ç©æ¨¹çš„èª¿æ•´æ–¹å¼å¦‚ä¸‹æ‰€ç¤ºï¼š<br>
+<div style="text-align: center;"><img style="width: 574px; height: 154px;" alt="Heap æ’åº" title="Heap æ’åº" src="images/heapSort-3.jpg"></div>
 <br>
-«Ø¥ß¦n°ï¿n¾ğ¤§«á¡A¾ğ®Ú¤@©w¬O©Ò¦³¤¸¯Àªº³Ì¤p­È¡A±zªº¥Øªº´N¬O¡G<br>
+å»ºç«‹å¥½å †ç©æ¨¹ä¹‹å¾Œï¼Œæ¨¹æ ¹ä¸€å®šæ˜¯æ‰€æœ‰å…ƒç´ çš„æœ€å°å€¼ï¼Œæ‚¨çš„ç›®çš„å°±æ˜¯ï¼š<br>
 <ol>
-  <li>±N³Ì¤p­È¨ú¥X</li>
-  <li>µM«á½Õ¾ã¾ğ¬°°ï¿n¾ğ</li>
+  <li>å°‡æœ€å°å€¼å–å‡º</li>
+  <li>ç„¶å¾Œèª¿æ•´æ¨¹ç‚ºå †ç©æ¨¹</li>
 </ol>
 <br>
-¤£Â_­«½Æ¥H¤Wªº¨BÆJ¡A´N¥i¥H¹F¨ì±Æ§Çªº®ÄªG¡A³Ì¤p­Èªº¨ú¥X¤è¦¡¬O±N¾ğ®Ú»P³Ì«á¤@­Ó¾ğ¸­¸`ÂI¥æ´«¡AµM«á¤Á¤U¾ğ¸­¸`ÂI¡A­«·s½Õ¾ã¾ğ¬°°ï¿n¾ğ¡A¦p¤U©Ò¥Ü¡G <br>
-<div style="text-align: center;"><img style="width: 591px; height: 199px;" alt="Heap ±Æ§Ç" title="Heap ±Æ§Ç" src="images/heapSort-4.jpg"></div>
+ä¸æ–·é‡è¤‡ä»¥ä¸Šçš„æ­¥é©Ÿï¼Œå°±å¯ä»¥é”åˆ°æ’åºçš„æ•ˆæœï¼Œæœ€å°å€¼çš„å–å‡ºæ–¹å¼æ˜¯å°‡æ¨¹æ ¹èˆ‡æœ€å¾Œä¸€å€‹æ¨¹è‘‰ç¯€é»äº¤æ›ï¼Œç„¶å¾Œåˆ‡ä¸‹æ¨¹è‘‰ç¯€é»ï¼Œé‡æ–°èª¿æ•´æ¨¹ç‚ºå †ç©æ¨¹ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š <br>
+<div style="text-align: center;"><img style="width: 591px; height: 199px;" alt="Heap æ’åº" title="Heap æ’åº" src="images/heapSort-4.jpg"></div>
 <br>
 
-½Õ¾ã§¹²¦«á¡A¾ğ®Ú¸`ÂI¤S¬O³Ì¤p­È¤F¡A©ó¬O§Ú­Ì¥i¥H­«ÂĞ³o­Ó¨BÆJ¡A¦A¨ú¥X³Ì¤p­È¡A¨Ã½Õ¾ã¾ğ¬°°ï¿n¾ğ¡A¦p¤U©Ò¥Ü¡G<br>
-<div style="text-align: center;"><img style="width: 564px; height: 197px;" alt="Heap ±Æ§Ç" title="Heap ±Æ§Ç" src="images/heapSort-5.jpg"></div>
+èª¿æ•´å®Œç•¢å¾Œï¼Œæ¨¹æ ¹ç¯€é»åˆæ˜¯æœ€å°å€¼äº†ï¼Œæ–¼æ˜¯æˆ‘å€‘å¯ä»¥é‡è¦†é€™å€‹æ­¥é©Ÿï¼Œå†å–å‡ºæœ€å°å€¼ï¼Œä¸¦èª¿æ•´æ¨¹ç‚ºå †ç©æ¨¹ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š<br>
+<div style="text-align: center;"><img style="width: 564px; height: 197px;" alt="Heap æ’åº" title="Heap æ’åº" src="images/heapSort-5.jpg"></div>
 <br>
 
-¦p¦¹­«ÂĞ¨BÆJ¤§«á¡A¥Ñ©ó¨Ï¥Î¤@ºû°}¦C¨ÓÀx¦s°ï¿n¾ğ¡A¨C¤@¦¸±N¾ğ¸­»P¾ğ®Ú¥æ´«ªº°Ê§@´N¬O±N³Ì¤p­È©ñ¦Ü«áºİªº°}¦C¡A©Ò¥H³Ì«á°}¦C´N¬OÅÜ¬°¤w±Æ§Çªºª¬ºA¡C
+å¦‚æ­¤é‡è¦†æ­¥é©Ÿä¹‹å¾Œï¼Œç”±æ–¼ä½¿ç”¨ä¸€ç¶­é™£åˆ—ä¾†å„²å­˜å †ç©æ¨¹ï¼Œæ¯ä¸€æ¬¡å°‡æ¨¹è‘‰èˆ‡æ¨¹æ ¹äº¤æ›çš„å‹•ä½œå°±æ˜¯å°‡æœ€å°å€¼æ”¾è‡³å¾Œç«¯çš„é™£åˆ—ï¼Œæ‰€ä»¥æœ€å¾Œé™£åˆ—å°±æ˜¯è®Šç‚ºå·²æ’åºçš„ç‹€æ…‹ã€‚
 <br>
 
 <br>
-¨ä¹ê°ï¿n¦b½Õ¾ãªº¹Lµ{¤¤¡A´N¬O¤@­Ó¿ï¾Üªº¦æ¬°¡A¨C¦¸±N³Ì¤p­È¿ï¦Ü¾ğ®Ú¡A¦Ó¿ï¾Üªº¸ô®|¨Ã¤£¬O©Ò¦³ªº¤¸¯À¡A¦Ó¬O¥Ñ¾ğ®Ú¦Ü¾ğ¸­ªº¸ô®|¡A¦]¦Ó¥i¥H¥[§Ö¿ï¾Üªº¹Lµ{¡A
-©Ò¥HHeap±Æ§Çªk¤~·|³QºÙ¤§¬°§ï¨}ªº¿ï¾Ü±Æ§Çªk¡C <br>
-<h2> ¹ê§@</h2>
+å…¶å¯¦å †ç©åœ¨èª¿æ•´çš„éç¨‹ä¸­ï¼Œå°±æ˜¯ä¸€å€‹é¸æ“‡çš„è¡Œç‚ºï¼Œæ¯æ¬¡å°‡æœ€å°å€¼é¸è‡³æ¨¹æ ¹ï¼Œè€Œé¸æ“‡çš„è·¯å¾‘ä¸¦ä¸æ˜¯æ‰€æœ‰çš„å…ƒç´ ï¼Œè€Œæ˜¯ç”±æ¨¹æ ¹è‡³æ¨¹è‘‰çš„è·¯å¾‘ï¼Œå› è€Œå¯ä»¥åŠ å¿«é¸æ“‡çš„éç¨‹ï¼Œ
+æ‰€ä»¥Heapæ’åºæ³•æ‰æœƒè¢«ç¨±ä¹‹ç‚ºæ”¹è‰¯çš„é¸æ“‡æ’åºæ³•ã€‚ <br>
+<h2> å¯¦ä½œ</h2>
 
 <ul>
   <li> C
   </li>
 </ul>
 
-<pre>#include &lt;stdio.h&gt; <br>#include &lt;stdlib.h&gt; <br>#include &lt;time.h&gt; <br>#define MAX 10 <br>#define SWAP(x,y) {int t; t = x; x = y; y = t;} <br><br>void createheap(int[]); <br>void heapsort(int[]); <br><br>int main(void) { <br>    int number[MAX+1] = {-1}; <br>    int i, num;  <br><br>    srand(time(NULL)); <br><br>    printf("±Æ§Ç«e¡G"); <br>    for(i = 1; i &lt;= MAX; i++) { <br>        number[i] = rand() % 100; <br>        printf("%d ", number[i]); <br>    } <br><br>    printf("\n«Ø¥ß°ï¿n¾ğ¡G"); <br>    createheap(number); <br>    for(i = 1; i &lt;= MAX; i++) <br>        printf("%d ", number[i]); <br>    printf("\n"); <br><br>    heapsort(number); <br><br>    printf("\n"); <br><br>    return 0; <br>} <br><br>void createheap(int number[]) { <br>    int i, s, p; <br>    int heap[MAX+1] = {-1}; <br><br>    for(i = 1; i &lt;= MAX; i++) { <br>        heap[i] = number[i]; <br>        s = i; <br>        p = i / 2; <br>        while(s &gt;= 2 &amp;&amp; heap[p] &gt; heap[s]) { <br>            SWAP(heap[p], heap[s]); <br>            s = p; <br>            p = s / 2; <br>        } <br>    } <br><br>    for(i = 1; i &lt;= MAX; i++) <br>        number[i] = heap[i]; <br>    <br>} <br><br>void heapsort(int number[]) { <br>    int i, m, p, s; <br><br>    m = MAX; <br>    while(m &gt; 1) { <br>        SWAP(number[1], number[m]); <br>        m--; <br><br>        p = 1; <br>        s = 2 * p; <br><br>        while(s &lt;= m) { <br>            if(s &lt; m &amp;&amp; number[s+1] &lt; number[s]) <br>                s++; <br>            if(number[p] &lt;= number[s]) <br>                break; <br>            SWAP(number[p], number[s]); <br>            p = s; <br>            s = 2 * p; <br>        } <br><br>        printf("\n±Æ§Ç¤¤¡G"); <br>        for(i = MAX; i &gt; 0; i--) <br>            printf("%d ", number[i]); <br>    } <br>} <br></pre>
+<pre>#include &lt;stdio.h&gt; <br>#include &lt;stdlib.h&gt; <br>#include &lt;time.h&gt; <br>#define MAX 10 <br>#define SWAP(x,y) {int t; t = x; x = y; y = t;} <br><br>void createheap(int[]); <br>void heapsort(int[]); <br><br>int main(void) { <br>    int number[MAX+1] = {-1}; <br>    int i, num;  <br><br>    srand(time(NULL)); <br><br>    printf("æ’åºå‰ï¼š"); <br>    for(i = 1; i &lt;= MAX; i++) { <br>        number[i] = rand() % 100; <br>        printf("%d ", number[i]); <br>    } <br><br>    printf("\nå»ºç«‹å †ç©æ¨¹ï¼š"); <br>    createheap(number); <br>    for(i = 1; i &lt;= MAX; i++) <br>        printf("%d ", number[i]); <br>    printf("\n"); <br><br>    heapsort(number); <br><br>    printf("\n"); <br><br>    return 0; <br>} <br><br>void createheap(int number[]) { <br>    int i, s, p; <br>    int heap[MAX+1] = {-1}; <br><br>    for(i = 1; i &lt;= MAX; i++) { <br>        heap[i] = number[i]; <br>        s = i; <br>        p = i / 2; <br>        while(s &gt;= 2 &amp;&amp; heap[p] &gt; heap[s]) { <br>            SWAP(heap[p], heap[s]); <br>            s = p; <br>            p = s / 2; <br>        } <br>    } <br><br>    for(i = 1; i &lt;= MAX; i++) <br>        number[i] = heap[i]; <br>    <br>} <br><br>void heapsort(int number[]) { <br>    int i, m, p, s; <br><br>    m = MAX; <br>    while(m &gt; 1) { <br>        SWAP(number[1], number[m]); <br>        m--; <br><br>        p = 1; <br>        s = 2 * p; <br><br>        while(s &lt;= m) { <br>            if(s &lt; m &amp;&amp; number[s+1] &lt; number[s]) <br>                s++; <br>            if(number[p] &lt;= number[s]) <br>                break; <br>            SWAP(number[p], number[s]); <br>            p = s; <br>            s = 2 * p; <br>        } <br><br>        printf("\næ’åºä¸­ï¼š"); <br>        for(i = MAX; i &gt; 0; i--) <br>            printf("%d ", number[i]); <br>    } <br>} <br></pre>
 
 <br>
 
@@ -121,7 +121,7 @@ Heap¡^¡A¦Ó¦P¤@¼hªº¤l¸`ÂI«hµL»İ²z·|¨ä¤j¤pÃö«Y¡A¨Ò¦p¤U­±´N¬O¤@­Ó°ï¿n¾ğ¡G <br>
   </li>
 </ul>
 
-<pre>public class HeapSort {<br>    public static void sort(int[] number) {<br>        int[] tmp = new int[number.length + 1];<br>        <br>        // °t¦X»¡©ú¡A¨Ï¥Î¤@­Ó¦³&#24487;²¾ªº¼È¦s°}¦C<br>        for(int i = 1; i &lt; tmp.length; i++) {<br>            tmp[i] = number[i-1];   <br>        }<br>        <br>        createHeap(tmp);<br>        <br>        int m = number.length; <br>        while(m &gt; 1) { <br>            swap(tmp, 1, m); <br>            m--; <br><br>            int p = 1; <br>            int s = 2 * p; <br><br>            while(s &lt;= m) { <br>                if(s &lt; m &amp;&amp; tmp[s+1] &lt; tmp[s]) <br>                    s++; <br>                if(tmp[p] &lt;= tmp[s]) <br>                    break; <br>                swap(tmp, p, s); <br>                p = s; <br>                s = 2 * p; <br>            } <br>        } <br>        <br>        // ³oÃä±N±Æ§Ç¦nªº¼È¦s°}¦C³]©w¦^­ì°}¦C<br>        for(int i = 0; i &lt; number.length; i++) {<br>            number[i] = tmp[i+1];   <br>        }<br>    }<br>    <br>    private static void createHeap(int[] tmp) { <br>        int[] heap = new int[tmp.length];<br>        <br>        for(int i = 0; i &lt; heap.length; i++)<br>            heap[i] = -1;<br><br>        for(int i = 1; i &lt; heap.length; i++) { <br>            heap[i] = tmp[i]; <br>            int s = i; <br>            int p = i / 2; <br>            while(s &gt;= 2 &amp;&amp; heap[p] &gt; heap[s]) { <br>                swap(heap, p, s); <br>                s = p; <br>                p = s / 2; <br>            } <br>        } <br><br>        for(int i = 1; i &lt; tmp.length; i++) <br>            tmp[i] = heap[i]; <br>        <br>    } <br>    <br>    private static void swap(int[] number, int i, int j) {<br>        int t; <br>        t = number[i]; <br>        number[i] = number[j]; <br>        number[j] = t;<br>    }<br>} </pre>
+<pre>public class HeapSort {<br>    public static void sort(int[] number) {<br>        int[] tmp = new int[number.length + 1];<br>        <br>        // é…åˆèªªæ˜ï¼Œä½¿ç”¨ä¸€å€‹æœ‰&#24487;ç§»çš„æš«å­˜é™£åˆ—<br>        for(int i = 1; i &lt; tmp.length; i++) {<br>            tmp[i] = number[i-1];   <br>        }<br>        <br>        createHeap(tmp);<br>        <br>        int m = number.length; <br>        while(m &gt; 1) { <br>            swap(tmp, 1, m); <br>            m--; <br><br>            int p = 1; <br>            int s = 2 * p; <br><br>            while(s &lt;= m) { <br>                if(s &lt; m &amp;&amp; tmp[s+1] &lt; tmp[s]) <br>                    s++; <br>                if(tmp[p] &lt;= tmp[s]) <br>                    break; <br>                swap(tmp, p, s); <br>                p = s; <br>                s = 2 * p; <br>            } <br>        } <br>        <br>        // é€™é‚Šå°‡æ’åºå¥½çš„æš«å­˜é™£åˆ—è¨­å®šå›åŸé™£åˆ—<br>        for(int i = 0; i &lt; number.length; i++) {<br>            number[i] = tmp[i+1];   <br>        }<br>    }<br>    <br>    private static void createHeap(int[] tmp) { <br>        int[] heap = new int[tmp.length];<br>        <br>        for(int i = 0; i &lt; heap.length; i++)<br>            heap[i] = -1;<br><br>        for(int i = 1; i &lt; heap.length; i++) { <br>            heap[i] = tmp[i]; <br>            int s = i; <br>            int p = i / 2; <br>            while(s &gt;= 2 &amp;&amp; heap[p] &gt; heap[s]) { <br>                swap(heap, p, s); <br>                s = p; <br>                p = s / 2; <br>            } <br>        } <br><br>        for(int i = 1; i &lt; tmp.length; i++) <br>            tmp[i] = heap[i]; <br>        <br>    } <br>    <br>    private static void swap(int[] number, int i, int j) {<br>        int t; <br>        t = number[i]; <br>        number[i] = number[j]; <br>        number[j] = t;<br>    }<br>} </pre>
 <br>
 <br>
 
