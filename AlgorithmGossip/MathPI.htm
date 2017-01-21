@@ -21,14 +21,14 @@
   
   
   
-  <meta content="text/html; charset=Big5" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 
 
 
   
   
   
-  <title>�X�a�dù�k�D PI</title>
+  <title>蒙地卡羅法求 PI</title>
 </head>
 
 
@@ -41,23 +41,23 @@ Gossip@caterpillar</a></h3>
 
 
 
-<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: �X�a�dù�k�D PI</a></h1>
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: 蒙地卡羅法求 PI</a></h1>
 
 
 
-<h2>&nbsp;����</h2>
-�X�a�dù�����������ꤧ�����A�Ӱ���k��P�q�j�Q��ҡA�H��ջD�W�C�X�a�dù���򥻭�z���H�üưt�X���n�����Ӷi����D�A�o�إH���v�Ӹ��D���覡�a����ժ��N���A���M�b��T�פW���Һü{�A������D����Ҥ�V�o�O�ӭȱo�ǲߪ��覡�C<br>
-<h2>�Ѫk</h2>
-�X�a�dù���Ѫk�A�Ω�P���n�������D�ءA�Ҧp�DPI�ȩξ�ꭱ�n�A�o�䤶�Цp��DPI�ȡF���]���@�Ӷ�b�|��1�A�ҥH�|�����@�ꭱ�n�N��PI�A�ӥ]�A���|�����@�ꪺ����έ��n�N��1�A�p�U�ϩҥܡG <br>
+<h2>&nbsp;說明</h2>
+蒙地卡羅為摩洛哥王國之首都，該國位於法國與義大利國境，以賭博聞名。蒙地卡羅的基本原理為以亂數配合面積公式來進行解題，這種以機率來解題的方式帶有賭博的意味，雖然在精確度上有所疑慮，但其解題的思考方向卻是個值得學習的方式。<br>
+<h2>解法</h2>
+蒙地卡羅的解法適用於與面積有關的題目，例如求PI值或橢圓面積，這邊介紹如何求PI值；假設有一個圓半徑為1，所以四分之一圓面積就為PI，而包括此四分之一圓的正方形面積就為1，如下圖所示： <br>
 
 
 
-<div style="text-align: center;"><img style="width: 352px; height: 170px;" alt="�X�a�dù" title="�X�a�dù" src="images/mathPI-1.jpg"></div>
+<div style="text-align: center;"><img style="width: 352px; height: 170px;" alt="蒙地卡羅" title="蒙地卡羅" src="images/mathPI-1.jpg"></div>
 <br>
-�p�G�H�N���b����Τ���g���С]�I�^�n�F�A�h�o�ǭ��С]�I�^���Ƿ|����|�����@�ꤺ�A���]�ҧ�g�����С]�I�^��n�I�A�b�ꤺ�����С]�I�^��c�I�A�h�̤�ҨӺ�A�N�|�o��W�Ϥ��̫᪺�����C<br>
+如果隨意的在正方形中投射飛標（點）好了，則這些飛標（點）有些會落於四分之一圓內，假設所投射的飛標（點）有n點，在圓內的飛標（點）有c點，則依比例來算，就會得到上圖中最後的公式。<br>
 <br>
-�ܩ�p��P�_�Ҳ��ͪ��I����ꤺ�A��²��A�O�üƲ���X�PY��ӼƭȡA�p�GX^2+Y^2����1�N�O���b�ꤺ�C <br>
-<h2> ��@</h2>
+至於如何判斷所產生的點落於圓內，很簡單，令亂數產生X與Y兩個數值，如果X^2+Y^2等於1就是落在圓內。 <br>
+<h2> 實作</h2>
 
 <ul>
   <li> C
