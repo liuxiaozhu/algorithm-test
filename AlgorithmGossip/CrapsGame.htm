@@ -27,7 +27,7 @@
   
   
   
-  <meta content="text/html; charset=Big5" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 
 
 
@@ -36,7 +36,7 @@
   
   
   
-  <title>Craps½ä³Õ¹CÀ¸</title>
+  <title>Crapsè³­åšéŠæˆ²</title>
 </head>
 
 
@@ -51,23 +51,23 @@ Gossip@caterpillar</a></h3>
 
 
 
-<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: Craps½ä³Õ¹CÀ¸</a></h1>
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: Crapsè³­åšéŠæˆ²</a></h1>
 
 
 
 
-<h2>»¡©ú</h2>
-¤@­ÓÂ²³æªº½ä³Õ¹CÀ¸¡A¹CÀ¸³W«h¦p¤U¡Gª±®aÂY¨â­Ó»ë¤l¡AÂI¼Æ¬°1¨ì6¡A¦pªG²Ä¤@¦¸ÂI¼Æ©M¬°7©Î11¡A«hª±®a³Ó¡A¦pªGÂI¼Æ©M¬°2¡B3©Î12¡A«hª±®a¿é¡A¦pªG©M
-¬°¨ä¥¦ÂI¼Æ¡A«h°O¿ı²Ä¤@¦¸ªºÂI¼Æ©M¡AµM«áÄ~ÄòÂY»ë¡Aª½¦ÜÂI¼Æ©Mµ¥©ó²Ä¤@¦¸ÂY¥XªºÂI¼Æ©M¡A«hª±®a³Ó¡A¦pªG¦b³o¤§«eÂY¥X¤FÂI¼Æ©M¬°7¡A«hª±®a¿é¡C<br>
-<h2>¸Ñªk</h2>
-³W«h¬İ¨Ó¦³¨Ç½ÆÂø¡A¦ı¬O¨ä¹ê¥u­n¨Ï¥Îswitch°t¦Xif±ø¥ó§PÂ_¨Ó¼¶¼g§Y¥i¡A¤p¤ß¤£­n§Ë¿ù³Ó­t¶¶§Ç§Y¥i¡C<br>
-<h2>¹ê§@</h2>
+<h2>èªªæ˜</h2>
+ä¸€å€‹ç°¡å–®çš„è³­åšéŠæˆ²ï¼ŒéŠæˆ²è¦å‰‡å¦‚ä¸‹ï¼šç©å®¶æ“²å…©å€‹éª°å­ï¼Œé»æ•¸ç‚º1åˆ°6ï¼Œå¦‚æœç¬¬ä¸€æ¬¡é»æ•¸å’Œç‚º7æˆ–11ï¼Œå‰‡ç©å®¶å‹ï¼Œå¦‚æœé»æ•¸å’Œç‚º2ã€3æˆ–12ï¼Œå‰‡ç©å®¶è¼¸ï¼Œå¦‚æœå’Œ
+ç‚ºå…¶å®ƒé»æ•¸ï¼Œå‰‡è¨˜éŒ„ç¬¬ä¸€æ¬¡çš„é»æ•¸å’Œï¼Œç„¶å¾Œç¹¼çºŒæ“²éª°ï¼Œç›´è‡³é»æ•¸å’Œç­‰æ–¼ç¬¬ä¸€æ¬¡æ“²å‡ºçš„é»æ•¸å’Œï¼Œå‰‡ç©å®¶å‹ï¼Œå¦‚æœåœ¨é€™ä¹‹å‰æ“²å‡ºäº†é»æ•¸å’Œç‚º7ï¼Œå‰‡ç©å®¶è¼¸ã€‚<br>
+<h2>è§£æ³•</h2>
+è¦å‰‡çœ‹ä¾†æœ‰äº›è¤‡é›œï¼Œä½†æ˜¯å…¶å¯¦åªè¦ä½¿ç”¨switché…åˆifæ¢ä»¶åˆ¤æ–·ä¾†æ’°å¯«å³å¯ï¼Œå°å¿ƒä¸è¦å¼„éŒ¯å‹è² é †åºå³å¯ã€‚<br>
+<h2>å¯¦ä½œ</h2>
 <ul>
   <li> C
   </li>
 </ul>
 
-<pre>#include &lt;stdio.h&gt;<br>#include &lt;stdlib.h&gt;<br>#include &lt;time.h&gt;<br>#define WON 0<br>#define LOST 1<br>#define CONTINUE 2<br><br>int rollDice() { <br>    return (rand() % 6) + (rand() % 6) + 2;<br>}<br><br>int main(void) {<br>    int firstRoll = 1;<br>    int gameStatus = CONTINUE;<br>    int die1, die2, sumOfDice;<br>    int firstPoint = 0;<br>    char c;<br><br>    srand(time(0));<br><br>    printf("Craps½ä³Õ¹CÀ¸¡A«öEnterÁä¶}©l¹CÀ¸****");<br><br>    while(1) {<br>         getchar();<br><br>        if(firstRoll) {<br>            sumOfDice = rollDice();<br>            printf("\nª±®aÂY¥XÂI¼Æ©M¡G%d\n", sumOfDice);<br><br>            switch(sumOfDice) {<br>                case 7: case 11:<br>                    gameStatus = WON; break;<br>                case 2: case 3: case 12:<br>                    gameStatus = LOST; break;<br>                default:<br>                    firstRoll = 0;<br>                    gameStatus = CONTINUE;<br>                    firstPoint = sumOfDice;<br>                    break;<br>            }<br>        }<br>        else {<br>            sumOfDice = rollDice();<br>            printf("\nª±®aÂY¥XÂI¼Æ©M¡G%d\n", sumOfDice);<br><br>            if(sumOfDice == firstPoint)<br>                gameStatus = WON;<br>            else if(sumOfDice == 7)<br>                gameStatus = LOST;<br>        }<br><br>        if(gameStatus == CONTINUE)<br>            puts("¥¼¤À³Ó­t¡A¦AÂY¤@¦¸****\n");<br>        else {<br>            if(gameStatus == WON)<br>                puts("ª±®a³Ó");<br>            else<br>                puts("ª±®a¿é");<br><br>            printf("¦Aª±¤@¦¸¡H");<br>            scanf("%c", &amp;c);<br>            if(c == 'n') {<br>                puts("¹CÀ¸µ²§ô");<br>                break;<br>            }<br>                <br>            firstRoll = 1;<br>        }<br>    }<br><br>    return 0;<br>} <br></pre>
+<pre>#include &lt;stdio.h&gt;<br>#include &lt;stdlib.h&gt;<br>#include &lt;time.h&gt;<br>#define WON 0<br>#define LOST 1<br>#define CONTINUE 2<br><br>int rollDice() { <br>    return (rand() % 6) + (rand() % 6) + 2;<br>}<br><br>int main(void) {<br>    int firstRoll = 1;<br>    int gameStatus = CONTINUE;<br>    int die1, die2, sumOfDice;<br>    int firstPoint = 0;<br>    char c;<br><br>    srand(time(0));<br><br>    printf("Crapsè³­åšéŠæˆ²ï¼ŒæŒ‰Enteréµé–‹å§‹éŠæˆ²****");<br><br>    while(1) {<br>         getchar();<br><br>        if(firstRoll) {<br>            sumOfDice = rollDice();<br>            printf("\nç©å®¶æ“²å‡ºé»æ•¸å’Œï¼š%d\n", sumOfDice);<br><br>            switch(sumOfDice) {<br>                case 7: case 11:<br>                    gameStatus = WON; break;<br>                case 2: case 3: case 12:<br>                    gameStatus = LOST; break;<br>                default:<br>                    firstRoll = 0;<br>                    gameStatus = CONTINUE;<br>                    firstPoint = sumOfDice;<br>                    break;<br>            }<br>        }<br>        else {<br>            sumOfDice = rollDice();<br>            printf("\nç©å®¶æ“²å‡ºé»æ•¸å’Œï¼š%d\n", sumOfDice);<br><br>            if(sumOfDice == firstPoint)<br>                gameStatus = WON;<br>            else if(sumOfDice == 7)<br>                gameStatus = LOST;<br>        }<br><br>        if(gameStatus == CONTINUE)<br>            puts("æœªåˆ†å‹è² ï¼Œå†æ“²ä¸€æ¬¡****\n");<br>        else {<br>            if(gameStatus == WON)<br>                puts("ç©å®¶å‹");<br>            else<br>                puts("ç©å®¶è¼¸");<br><br>            printf("å†ç©ä¸€æ¬¡ï¼Ÿ");<br>            scanf("%c", &amp;c);<br>            if(c == 'n') {<br>                puts("éŠæˆ²çµæŸ");<br>                break;<br>            }<br>                <br>            firstRoll = 1;<br>        }<br>    }<br><br>    return 0;<br>} <br></pre>
 
 <br>
 
@@ -76,7 +76,7 @@ Gossip@caterpillar</a></h3>
   </li>
 </ul>
 
-<pre>import java.io.*; <br><br>public class Craps { <br>    public static void main(String[] args) <br>                                   throws IOException { <br>        final int WON = 0, LOST = 1, CONTINUE = 2; <br>        boolean firstRoll = true; <br>        int gameStatus = CONTINUE; <br>        int die1, die2, sumOfDice; <br>        int firstPoint = 0; <br>        <br>        System.out.print(<br>                 "Craps½ä³Õ¹CÀ¸¡A«öEnterÁä¶}©l¹CÀ¸****"); <br><br>        while(true) { <br>            System.in.read(); <br><br>            if(firstRoll) { <br>               sumOfDice = rollDice(); <br>               System.out.println(<br>                         "\nª±®aÂY¥XÂI¼Æ©M¡G" + sumOfDice); <br><br>               switch(sumOfDice) { <br>                    case 7: case 11: <br>                        gameStatus = WON; break; <br>                    case 2: case 3: case 12: <br>                        gameStatus = LOST; break; <br>                    default: <br>                        firstRoll = false; <br>                        gameStatus = CONTINUE; <br>                        firstPoint = sumOfDice; <br>                        break; <br>                } <br>            } <br>            else { <br>                sumOfDice = rollDice(); <br>                System.out.println(<br>                         "\nª±®aÂY¥XÂI¼Æ©M¡G" + sumOfDice); <br><br>                if(sumOfDice == firstPoint) <br>                    gameStatus = WON; <br>                else if(sumOfDice == 7) <br>                    gameStatus = LOST; <br>            } <br><br>            if(gameStatus == CONTINUE) <br>                System.out.println("¥¼¤À³Ó­t¡A¦AÂY¤@¦¸****"); <br>            else { <br>                if(gameStatus == WON) <br>                    System.out.println("ª±®a³Ó"); <br>                else <br>                    System.out.println("ª±®a¿é"); <br><br>                System.out.print("¦Aª±¤@¦¸¡H"); <br>                if(System.in.read() == 'n') { <br>                    System.out.println("¹CÀ¸µ²§ô"); <br>                    break; <br>                } <br>                <br>                firstRoll = true; <br>            } <br>        } <br>    } <br><br>    public static int rollDice() { <br>        int roll = ((int)(Math.random() * 6) + <br>                    (int)(Math.random() * 6)); <br><br>        if(roll &lt; 2) {<br>            roll = 2;<br>        }<br><br>        return roll;<br>    } <br>}</pre>
+<pre>import java.io.*; <br><br>public class Craps { <br>    public static void main(String[] args) <br>                                   throws IOException { <br>        final int WON = 0, LOST = 1, CONTINUE = 2; <br>        boolean firstRoll = true; <br>        int gameStatus = CONTINUE; <br>        int die1, die2, sumOfDice; <br>        int firstPoint = 0; <br>        <br>        System.out.print(<br>                 "Crapsè³­åšéŠæˆ²ï¼ŒæŒ‰Enteréµé–‹å§‹éŠæˆ²****"); <br><br>        while(true) { <br>            System.in.read(); <br><br>            if(firstRoll) { <br>               sumOfDice = rollDice(); <br>               System.out.println(<br>                         "\nç©å®¶æ“²å‡ºé»æ•¸å’Œï¼š" + sumOfDice); <br><br>               switch(sumOfDice) { <br>                    case 7: case 11: <br>                        gameStatus = WON; break; <br>                    case 2: case 3: case 12: <br>                        gameStatus = LOST; break; <br>                    default: <br>                        firstRoll = false; <br>                        gameStatus = CONTINUE; <br>                        firstPoint = sumOfDice; <br>                        break; <br>                } <br>            } <br>            else { <br>                sumOfDice = rollDice(); <br>                System.out.println(<br>                         "\nç©å®¶æ“²å‡ºé»æ•¸å’Œï¼š" + sumOfDice); <br><br>                if(sumOfDice == firstPoint) <br>                    gameStatus = WON; <br>                else if(sumOfDice == 7) <br>                    gameStatus = LOST; <br>            } <br><br>            if(gameStatus == CONTINUE) <br>                System.out.println("æœªåˆ†å‹è² ï¼Œå†æ“²ä¸€æ¬¡****"); <br>            else { <br>                if(gameStatus == WON) <br>                    System.out.println("ç©å®¶å‹"); <br>                else <br>                    System.out.println("ç©å®¶è¼¸"); <br><br>                System.out.print("å†ç©ä¸€æ¬¡ï¼Ÿ"); <br>                if(System.in.read() == 'n') { <br>                    System.out.println("éŠæˆ²çµæŸ"); <br>                    break; <br>                } <br>                <br>                firstRoll = true; <br>            } <br>        } <br>    } <br><br>    public static int rollDice() { <br>        int roll = ((int)(Math.random() * 6) + <br>                    (int)(Math.random() * 6)); <br><br>        if(roll &lt; 2) {<br>            roll = 2;<br>        }<br><br>        return roll;<br>    } <br>}</pre>
 <br>
 
 
