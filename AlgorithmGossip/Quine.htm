@@ -27,7 +27,7 @@
   
   
   
-  <meta content="text/html; charset=Big5" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 
 
 
@@ -36,7 +36,7 @@
   
   
   
-  <title>�۲��͵{���]quine�^</title>
+  <title>自產生程式（quine）</title>
 </head>
 
 
@@ -51,29 +51,29 @@ Gossip@caterpillar</a></h3>
 
 
 
-<h1><a href="AlgorithmGossip.htm">Algorithm Gossip:&nbsp;�۲��͵{���]quine�^</a></h1>
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip:&nbsp;自產生程式（quine）</a></h1>
 
 
 
 
-<h2> ����</h2>
+<h2> 說明</h2>
 
-�۲��͵{���]quine�^�N�O�n�g�@�ӵ{���A�o�ӵ{�����ت��N�O�y�z���ۤv�A²�檺���A�p�G�z�g�F�@��.java�A�sĶ���Უ�ͤ@��.class�ɡA�M��
-�z�N.java�ɮקR���A�z��.class�ɤ��ݭn.java�ɡA���]�i�H�L�X.java�ɪ����e�C
-<h2> �Ѫk</h2>
+自產生程式（quine）就是要寫一個程式，這個程式的目的就是描述它自己，簡單的說，如果您寫了一個.java，編譯它後產生一個.class檔，然後
+您將.java檔案刪除，您的.class檔不需要.java檔，它也可以印出.java檔的內容。
+<h2> 解法</h2>
 
-�ھڭp��z�ס]Computation
-Theorem�^���j��z�A���󪺵{���y�����i�H²�檺�g�X�۲��͵{���C²������O�g�X�۲��͵{���ä��ݭn�S�O����k�A�u�n�Q��Turing
-Machine���X�R�h�aTuring Machine���ާ@��z�N�i�H�g�X�C <br>
+根據計算理論（Computation
+Theorem）遞迴原理，任何的程式語言都可以簡單的寫出自產生程式。簡單指的是寫出自產生程式並不需要特別的算法，只要利用Turing
+Machine的擴充多帶Turing Machine的操作原理就可以寫出。 <br>
 
 <br>
-�J�}�p��z�׳o�ݦ����`���Ǭ줣�̥ͭΤ@�몺�����ӻ����p��g�۲��͵{���A�{������A�BB��ӳ����AA�����y�zB�������\��AB�����h
-�t�d�NA���y�z�L�X�ӡAA���G�����ʿ�غc�n��B�A��B�n��A�~��C�L�A�o�ݦ��٬ޡA����ꤣ�M�A���k�O�NB�s�X�A��m�b���P���r���a�W�A�X�Ӧr���a�ä�
-�O���I�A�ݵ{���y�����y�k�өw�A�z�i��ݭn�h�X�ӱa�A�ΤִX�ӱa�A�s�X�n����AA���������A�}�l�i�JB�����AB�������_�b�h�Ӧr���a�W�Ӧ^�A�ìD��X�r��
-����ܥX�ӡC 
-<h2> ��@</h2>
+撇開計算理論這看似高深的學科不談們用一般的解釋來說明如何寫自產生程式，程式分做A、B兩個部分，A部分描述B部分的功能，B部分則
+負責將A的描述印出來，A似乎必須倚賴建構好的B，但B要有A才能列印，這看似矛盾，但其實不然，做法是將B編碼，放置在不同的字元帶上，幾個字元帶並不
+是重點，看程式語言的語法而定，您可能需要多幾個帶，或少幾個帶，編碼好之後，A部分完成，開始進入B部分，B部分不斷在多個字元帶上來回，並挑選出字元
+並顯示出來。 
+<h2> 實作</h2>
 
-�����ݹ�ҷ|�e�����ǡA�H�U�O�HJava�{����@���۲��͵{���A�٦Ҽ{�F�{���Y�ƻP�iŪ�ʡC<br>
+直接看實例會容易懂些，以下是以Java程式實作的自產生程式，還考慮了程式縮排與可讀性。<br>
 
 
 <br>
@@ -82,7 +82,7 @@ Machine���X�R�h�aTuring Machine���ާ@��z�N�i�H�g�X�C <br>
 <br>
 
 <a style="font-weight: bold;" href="http://www.nyx.org/%7Egthompso/quine.htm"><cite class="urllink">The Quine Page</cite></a>
-���U�ػy�����۲��͵{������{�C
+有各種語言的自產生程式之實現。
 <br>
 
 
