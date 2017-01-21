@@ -21,14 +21,14 @@
   
   
   
-  <meta content="text/html; charset=Big5" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 
 
 
   
   
   
-  <title>�ͩR�C��</title>
+  <title>生命遊戲</title>
 </head>
 
 
@@ -41,26 +41,26 @@ Gossip@caterpillar</a></h3>
 
 
 
-<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: �ͩR�C��</a></h1>
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: 生命遊戲</a></h1>
 
 
 
-<h2>&nbsp;����</h2>
-�ͩR�C���]game of life�^��1970�~�ѭ^��ƾǮaJ. H. Conway�Ҵ��X�A�Y�@�ӭM���F�~�]�A�W�B�U�B���B�k�B���W�B���U�B�k�W�P�k�U�۾F���ӭM�A�C���W�h�p�U�G<br>
+<h2>&nbsp;說明</h2>
+生命遊戲（game of life）為1970年由英國數學家J. H. Conway所提出，某一細胞的鄰居包括上、下、左、右、左上、左下、右上與右下相鄰之細胞，遊戲規則如下：<br>
 <ol>
-  <li>�t�榺�`�G�p�G�ӭM���F�~�p��@�ӡA�h�ӲӭM�b�U�@�����A�N���`�C</li>
-  <li>�������`�G�p�G�ӭM���F�~�b�|�ӥH�W�A�h�ӲӭM�b�U�@�����A�N���`�C</li>
-  <li>í�w�G�p�G�ӭM���F�~���G�өΤT�ӡA�h�U�@�����A��í�w�s���C</li>
-  <li>�_���G�p�G�Y��m��L�ӭM�s���A�ӸӦ�m���F�~���T�ӡA�h�Ӧ�m�N�_���@�ӭM�C</li>
+  <li>孤單死亡：如果細胞的鄰居小於一個，則該細胞在下一次狀態將死亡。</li>
+  <li>擁擠死亡：如果細胞的鄰居在四個以上，則該細胞在下一次狀態將死亡。</li>
+  <li>穩定：如果細胞的鄰居為二個或三個，則下一次狀態為穩定存活。</li>
+  <li>復活：如果某位置原無細胞存活，而該位置的鄰居為三個，則該位置將復活一細胞。</li>
 </ol>
-<h2>�Ѫk</h2>
-�ͩR�C�����W�h�i²�Ƭ��H�U�A�èϥ�CASE���Y�i�ϥε{����@�G<br>
+<h2>解法</h2>
+生命遊戲的規則可簡化為以下，並使用CASE比對即可使用程式實作：<br>
 <ol>
-  <li>�F�~�ӼƬ�0�B1�B4�B5�B6�B7�B8�ɡA�h�ӲӭM�U�����A�����`�C</li>
-  <li>�F�~�ӼƬ�2�ɡA�h�ӲӭM�U�����A���_���C</li>
-  <li>�F�~�ӼƬ�3�ɡA�h�ӲӭM�U�����A��í�w�C</li>
+  <li>鄰居個數為0、1、4、5、6、7、8時，則該細胞下次狀態為死亡。</li>
+  <li>鄰居個數為2時，則該細胞下次狀態為復活。</li>
+  <li>鄰居個數為3時，則該細胞下次狀態為穩定。</li>
 </ol>
-<h2> ��@</h2>
+<h2> 實作</h2>
 
 <ul>
   <li> C
