@@ -33,7 +33,7 @@
   
   
   
-  <meta content="text/html; charset=Big5" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 
 
 
@@ -44,7 +44,7 @@
   
   
   
-  <title>4N �]��}</title>
+  <title>4N 魔方陣</title>
 </head>
 
 
@@ -61,42 +61,42 @@ Gossip@caterpillar</a></h3>
 
 
 
-<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: 4N �]��}</a></h1>
+<h1><a href="AlgorithmGossip.htm">Algorithm Gossip: 4N 魔方陣</a></h1>
 
 
 
 
 
-<h2>����</h2>
+<h2>說明</h2>
 
-�P <a href="OddArray.htm">�_���]�N��}</a> �ۦP�A�b��D�U��B�U�C�P�U�﨤�u���M�۵��A�ӳo����}�����׬O4�����ơC<br>
+與 <a href="OddArray.htm">奇數魔術方陣</a> 相同，在於求各行、各列與各對角線的和相等，而這次方陣的維度是4的倍數。<br>
 
-<h2>�Ѫk</h2>
+<h2>解法</h2>
 
-���Ӭݬ�4X4��}���Ѫk�G <br>
+先來看看4X4方陣的解法： <br>
 
 
-<div style="text-align: center;"><img style="width: 423px; height: 117px;" alt="4N �]��}" title="4N �]��}" src="images/fourNArray-1.jpg"><br>
-
-<br>
-
-<div style="text-align: left;">²�檺���A�N�O�@�ӱq���W��1�̧Ƕ}�l��A���J�﨤�u����A�t�@�ӥѥ��W��16�}�l��A���u��b�﨤�u�A�A�N��ӦX�_�ӴN�O�ѵ��F�F�p�GN�j��2�A�h�H 4X4�����e�﨤�u�G <br>
-
-<div style="text-align: center;"><img style="width: 528px; height: 232px;" alt="4N �]��}" title="4N �]��}" src="images/fourNArray-2.jpg"></div>
+<div style="text-align: center;"><img style="width: 423px; height: 117px;" alt="4N 魔方陣" title="4N 魔方陣" src="images/fourNArray-1.jpg"><br>
 
 <br>
 
-�ܩ�﨤�u����m�Ӧp��P�_�A����Ӥ����A�����쪺�i�H�e�ϦL�ҬݬݡA�p�U�ҥܡG<br>
+<div style="text-align: left;">簡單的說，就是一個從左上由1依序開始填，但遇對角線不填，另一個由左上由16開始填，但只填在對角線，再將兩個合起來就是解答了；如果N大於2，則以 4X4為單位畫對角線： <br>
 
-<div style="margin-left: 40px;"><span style="font-weight: bold; font-family: Courier New,Courier,monospace;">���W�ܥk�U�Gj % 4 == i % 4</span><br style="font-weight: bold; font-family: Courier New,Courier,monospace;">
+<div style="text-align: center;"><img style="width: 528px; height: 232px;" alt="4N 魔方陣" title="4N 魔方陣" src="images/fourNArray-2.jpg"></div>
 
-<span style="font-weight: bold; font-family: Courier New,Courier,monospace;">�k�W�ܥ��U�G(j % 4 + i % 4) == 1 </span><br>
+<br>
+
+至於對角線的位置該如何判斷，有兩個公式，有興趣的可以畫圖印證看看，如下所示：<br>
+
+<div style="margin-left: 40px;"><span style="font-weight: bold; font-family: Courier New,Courier,monospace;">左上至右下：j % 4 == i % 4</span><br style="font-weight: bold; font-family: Courier New,Courier,monospace;">
+
+<span style="font-weight: bold; font-family: Courier New,Courier,monospace;">右上至左下：(j % 4 + i % 4) == 1 </span><br>
 
 </div>
 
 <br>
 
-<h2> ��@</h2>
+<h2> 實作</h2>
 
 
 <ul>
